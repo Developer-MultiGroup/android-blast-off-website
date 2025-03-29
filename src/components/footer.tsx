@@ -2,13 +2,13 @@
 
 import { useEffect, useState } from "react";
 import {
+  XLogo,
   LinkedinLogo,
   InstagramLogo,
-  TwitterLogo,
   YoutubeLogo,
   ArrowUp,
   GithubLogo,
-} from "phosphor-react";
+} from "@phosphor-icons/react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
@@ -32,12 +32,13 @@ export default function Footer() {
             <Image
               src="/multigroup.webp"
               alt="MultiGroup Logo"
-              width={200}
-              height={200}
+              className="w-[200px] md:w-[300px]"
+              width={300} // Maksimum genişlik
+              height={300} // Oranları korumak için height, orijinal görsel oranına göre ayarlanmalı
             />
           </Link>
         </div>
-        <nav className="mt-4 lg:mt-0 flex flex-col md:flex-row gap-6 text-sm items-center justify-center w-full text-center align-middle">
+        <nav className="mt-4 lg:mt-0 flex flex-col md:flex-row gap-6 text-sm md:text-lg items-center justify-center w-full text-center align-middle">
           {/* <Link
             aria-label="Kaynaklar sayfası"
             href="/kaynaklar"
@@ -75,7 +76,7 @@ export default function Footer() {
             target="_blank"
             data-umami-event="X (Twitter)"
           >
-            <TwitterLogo className="text-xl text-white hover:text-gray-300" />
+            <XLogo className="text-xl text-white hover:text-gray-300" />
           </Link>
           <Link
             aria-label="DMG Youtube Hesabı"

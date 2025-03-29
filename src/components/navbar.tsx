@@ -8,7 +8,7 @@ import {
   NavigationMenuItem,
   NavigationMenuList,
 } from "@/components/ui/navigation-menu";
-import { List } from "lucide-react"; 
+import { List } from "@phosphor-icons/react"; 
 import Image from "next/image";
 
 const Navbar = () => {
