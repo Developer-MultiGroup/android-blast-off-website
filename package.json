@@ -6,8 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "postinstall": "tailwindcss postinstall"
+    "lint": "next lint"
   },
   "dependencies": {
     "@phosphor-icons/react": "^2.1.7",
