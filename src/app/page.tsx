@@ -6,6 +6,24 @@ import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import { ChevronDown } from "lucide-react";
 
+const bootcampBenefits = [
+  {
+    title: "Güncel ve Yetkin Müfredat",
+    content:
+      "Google'ın resmi kaynakları ve Jetpack Compose'un en son sürümlerine göre hazırlanmış içeriklerle, sektörün ihtiyaçlarına %100 uyumlu içerik.",
+  },
+  {
+    title: "Proje Tabanlı Öğrenme",
+    content:
+      "Sadece teori değil! Her modülde gerçek dünya uygulamaları geliştirerek portfolyonuzu şekillendirin. Farklı projeler ile işverenlerin dikkatini çekin.",
+  },
+  {
+    title: "Topluluk ve Mentor Desteği",
+    content:
+      "Türkçe kaynak eksikliğini ortadan kaldıran yerel bir toplulukla, deneyimli mentörler eşliğinde sorunlarınızı anında çözün.",
+  },
+];
+
 export default function Home() {
   const route = useRouter();
 
@@ -31,14 +49,15 @@ export default function Home() {
 
   return (
     <>
-      <section className="min-h-screen bg-[#1F2326] flex flex-col items-center align-middle justify-center text-white relative">
-        <h1 className="text-5xl lg:text-6xl xl:text-8xl font-tan-nimbus text-center px-4 leading-snug">
+      {/* Hero Section - Responsive for all devices */}
+      <section className="min-h-screen bg-[#1F2326] flex flex-col items-center justify-center text-white relative px-4 sm:px-6 md:px-8">
+        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-tan-nimbus text-center leading-tight sm:leading-snug">
           Android <span className="text-secondary">Blast Off</span>{" "}
         </h1>
-        <p className="text-xl lg:text-2xl xl:text-4xl pt-4 font-extrabold font-montserrat-mid text-center px-4">
+        <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl pt-4 font-extrabold font-montserrat-mid text-center">
           <span className="text-accent">Jetpack Compose</span> Bootcamp
         </p>
-        <button className="px-4 py-2 bg-secondary rounded-lg mt-8 text-black font-extrabold text-lg lg:text-xl xl:text-2xl font-montserrat-mid">
+        <button className="px-4 py-2 bg-secondary rounded-lg mt-6 md:mt-8 text-black font-extrabold text-base sm:text-lg md:text-xl lg:text-2xl font-montserrat-mid hover:bg-opacity-90 transition-colors">
           Tamamıyla Ücretsiz
         </button>
 
@@ -48,127 +67,130 @@ export default function Home() {
             isVisible ? "opacity-100" : "opacity-0"
           }`}
         >
-          <p className="text-lg lg:text-xl mb-2 text-secondary font-montserrat-mid">
+          <p className="text-base sm:text-lg md:text-xl mb-2 text-secondary font-montserrat-mid">
             Öğrenmeye Başla
           </p>
           <div className="animate-bounce bg-primary rounded-full p-2">
-            <ChevronDown className="h-6 w-6 text-secondary" />
+            <ChevronDown className="h-5 w-5 sm:h-6 sm:w-6 text-secondary" />
           </div>
         </div>
       </section>
 
       <GoogleLogoInfiniteScroll />
 
+      {/* Main Content Section */}
       <section className="bg-background">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 p-4 sm:p-8 py-8 sm:py-16 max-w-7xl mx-auto">
-          <div className="p-6 bg-[#1F2326] rounded-lg border-4 border-secondary group">
-            <h2 className="text-2xl font-bold text-white mb-3">
-              Başlamadan Önce
-            </h2>
-            <p className="text-white mb-4 font-montserrat-mid ">
-              Android geliştirmeye başlamak isteyenler için 
-              <span className="text-secondary">en güncel ve kapsamlı</span>{" "}
-              eğitim içeriği. Bu kursa adım atmadan önce tek yapmanız gereken
-              şey,{" "}
-              <span className="text-secondary">
-                kararlılıkla hedeflerinize odaklanmaktır.
-              </span>
-            </p>
-            <div className="flex justify-end group-hover:-translate-y-2 transition-all duration-300">
-              <Image
-                src="/android-icon.svg"
-                alt="Android Icon"
-                width={32}
-                height={32}
-                className="opacity-80"
-              />
+        {/* Backdrop Containers Section - Centered and Responsive */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 p-4 sm:p-6 md:p-8 py-8 sm:py-12 md:py-16 max-w-7xl mx-auto">
+          {/* First Backdrop Container */}
+          <div className="relative group mx-auto w-full max-w-md md:max-w-none">
+            {/* Shadow effect with fixed shadow size */}
+            <div className="relative p-4 sm:p-6 bg-primary rounded-lg h-full shadow-[4px_4px_0px_0px_#41DF99]">
+              <h2 className="text-xl sm:text-2xl font-bold text-white mb-3">
+                Başlamadan Önce
+              </h2>
+              <p className="text-white mb-4 font-montserrat-mid text-sm sm:text-base">
+                Android geliştirmeye başlamak isteyenler için{" "}
+                <span className="text-secondary">en güncel ve kapsamlı</span>{" "}
+                eğitim içeriği. Bu kursa adım atmadan önce tek yapmanız gereken
+                şey,{" "}
+                <span className="text-secondary">
+                  kararlılıkla hedeflerinize odaklanmaktır.
+                </span>
+              </p>
+              <div className="flex justify-end group-hover:-translate-y-2 transition-all duration-300">
+                <Image
+                  src="/android-icon.svg"
+                  alt="Android Icon"
+                  width={32}
+                  height={32}
+                  className="opacity-80"
+                />
+              </div>
             </div>
           </div>
 
-          <div className="p-6 bg-[#1F2326] rounded-lg border-4 border-secondary group">
-            <h2 className="text-2xl font-bold text-white mb-3">
-              Bootcamp Hedefleri
-            </h2>
-            <p className="text-white mb-4 font-montserrat-mid">
-              <span className="text-secondary">Kotlin ve Jetpack Compose</span>{" "}
-              kullanarak sıfırdan bir mobil uygulama geliştirebilecek, aynı
-              zamanda bu teknolojilerin{" "}
-              <span className="text-secondary">mantığını kavrayarak</span>{" "}
-              kendinizi ileri seviye içeriklere hazırlayabileceksiniz.
-            </p>
-            <div className="flex justify-end group-hover:-translate-y-2 transition-all duration-300">
-              <Image
-                src="/android-icon.svg"
-                alt="Android Icon"
-                width={32}
-                height={32}
-                className="opacity-80"
-              />
+          {/* Second Backdrop Container */}
+          <div className="relative group mx-auto w-full max-w-md md:max-w-none">
+            {/* Shadow effect with fixed shadow size */}
+            <div className="relative p-4 sm:p-6 bg-primary rounded-lg h-full shadow-[4px_4px_0px_0px_#41DF99]">
+              <h2 className="text-xl sm:text-2xl font-bold text-white mb-3">
+                Bootcamp Hedefleri
+              </h2>
+              <p className="text-white mb-4 font-montserrat-mid text-sm sm:text-base">
+                <span className="text-secondary">
+                  Kotlin ve Jetpack Compose
+                </span>{" "}
+                kullanarak sıfırdan bir mobil uygulama geliştirebilecek, aynı
+                zamanda bu teknolojilerin{" "}
+                <span className="text-secondary">mantığını kavrayarak</span>{" "}
+                kendinizi ileri seviye içeriklere hazırlayabileceksiniz.
+              </p>
+              <div className="flex justify-end group-hover:-translate-y-2 transition-all duration-300">
+                <Image
+                  src="/android-icon.svg"
+                  alt="Android Icon"
+                  width={32}
+                  height={32}
+                  className="opacity-80"
+                />
+              </div>
             </div>
           </div>
         </div>
 
-        <div className="max-w-7xl mx-auto py-8 sm:py-16 px-4">
-          <h2 className="text-center text-3xl sm:text-4xl md:text-5xl font-bold mb-8">
+        {/* Jetpack Compose Section */}
+        <div className="max-w-7xl mx-auto py-8 sm:py-12 md:py-16 px-4 sm:px-6 md:px-8">
+          <h2 className="text-center text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-6 sm:mb-8">
             <span className="text-accent">Jetpack Compose</span>{" "}
             <span className="text-black dark:text-white">ile modern</span>{" "}
-            <span className="text-secondary">Android</span> <br />
+            <span className="text-secondary">Android</span>{" "}
+            <br className="sm:hidden" />
             <span className="text-secondary">geliştirmeye</span>{" "}
             <span className="text-black dark:text-white">ilk adımı at!</span>
           </h2>
 
-          <p className="text-center max-w-3xl mx-auto text-base sm:text-lg my-8 sm:my-12 px-4">
+          <p className="text-center max-w-3xl mx-auto text-sm sm:text-base md:text-lg my-6 sm:my-8 md:my-12 px-4">
             Jetpack Compose ile Android geliştirici olmak istiyorsan, en güncel
             müfredat ve yeniliklerle güçlü bir başlangıç yap!
           </p>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-10 mt-8 sm:mt-16 pt-8 sm:pt-16">
-            <div className="bg-secondary rounded-lg overflow-hidden relative">
-              <div className="p-4">
-                <Image
-                  src="/placeholder.png"
-                  alt="Video Placeholder"
-                  width={400}
-                  height={300}
-                  className="w-full h-auto rounded-lg"
-                />
-              </div>
-              {/* <div className="absolute bottom-0 right-0">
-                <svg
-                  width="60"
-                  height="60"
-                  viewBox="0 0 80 80"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="sm:w-20 sm:h-20"
-                >
-                  <path
-                    d="M40 0C17.9086 0 0 17.9086 0 40C0 62.0914 17.9086 80 40 80C62.0914 80 80 62.0914 80 40C80 17.9086 62.0914 0 40 0Z"
-                    fill="#DD3E34"
-                    fillOpacity="0.2"
+          {/* Video and Text Section */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 md:gap-10 mt-8 sm:mt-12 md:mt-16 pt-8">
+            {/* Video Container */}
+            <div className="relative group mx-auto w-full max-w-lg lg:max-w-none">
+              {/* Using fixed box-shadow instead of translating element */}
+              <div className="bg-secondary rounded-lg overflow-hidden shadow-[6px_6px_0px_0px_#1F2226]">
+                <div className="p-2 sm:p-3 md:p-4">
+                  <Image
+                    src="/placeholder.png"
+                    alt="Video Placeholder"
+                    width={400}
+                    height={300}
+                    className="w-full h-auto rounded-lg"
                   />
-                  <path d="M50 40L35 50V30L50 40Z" fill="#DD3E34" />
-                </svg>
-              </div> */}
+                </div>
+              </div>
             </div>
 
-            <div className="flex flex-col justify-center">
-              <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">
+            {/* Text Content */}
+            <div className="flex flex-col justify-center px-4 sm:px-0">
+              <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4">
                 Canlı Kodlama ile %80 Daha Kalıcı Öğrenin!
               </h3>
-              <p className="text-gray-600 dark:text-gray-300 mb-6">
+              <p className="text-gray-600 dark:text-gray-300 mb-4 sm:mb-6 text-sm sm:text-base">
                 Araştırmalar gösteriyor ki video tabanlı eğitimler, metin
                 tabanlı kaynaklara göre 3 kat daha etkili öğrenme sağlıyor!
                 Bootcamp boyunca tüm dersleri gerçek zamanlı proje geliştirme
                 videolarıyla işliyoruz.
               </p>
-              <p className="text-gray-600 dark:text-gray-300 mb-8">
+              <p className="text-gray-600 dark:text-gray-300 mb-6 sm:mb-8 text-sm sm:text-base">
                 Bize katılın ve hiçbir detay atlanmadan, gerçek bir developer
                 workflow'uyla ilerleyin!
               </p>
               <div>
                 <button
-                  className="px-6 py-3 bg-[#1F2326] text-white rounded-md font-medium hover:cursor-pointer"
+                  className="px-4 sm:px-6 py-2 sm:py-3 bg-primary text-white rounded-md font-medium hover:bg-opacity-90 transition-colors text-sm sm:text-base hover:cursor-pointer"
                   onClick={handleLessonRoute}
                 >
                   Eğitimler
@@ -178,10 +200,12 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="max-w-7xl  mx-auto py-16 sm:py-32 px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-10">
+        {/* Google Content Section */}
+        <div className="max-w-7xl mx-auto py-12 sm:py-16 md:py-24 lg:py-32 px-4 sm:px-6 md:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 md:gap-10">
+            {/* Google Text */}
             <div className="flex flex-col justify-center">
-              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-8">
+              <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-6 sm:mb-8">
                 <span className="text-[#4285F4]">Google</span>
                 <span className="text-black dark:text-white">
                   'ın Hazırladığı{" "}
@@ -196,7 +220,8 @@ export default function Home() {
               </h2>
             </div>
 
-            <div className="grid grid-cols-2 gap-4">
+            {/* Topics Grid */}
+            <div className="grid grid-cols-2 gap-3 sm:gap-4">
               {[
                 "Kotlin ile Modern Programlama Temelleri",
                 "Jetpack Compose ile Responsive UI Tasarımı",
@@ -210,8 +235,8 @@ export default function Home() {
                 "Performans Optimizasyonu ve Debugging Teknikleri",
               ].map((topic, index) => (
                 <div key={index} className="flex items-center space-x-2">
-                  <span className="w-3 h-3 sm:w-4 sm:h-4 rounded-full bg-secondary flex-shrink-0"></span>
-                  <span className="text-sm md:text-base font-medium">
+                  <span className="w-2 h-2 sm:w-3 sm:h-3 md:w-4 md:h-4 rounded-full bg-secondary flex-shrink-0"></span>
+                  <span className="text-xs sm:text-sm md:text-base font-medium">
                     {topic}
                   </span>
                 </div>
@@ -220,8 +245,9 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="max-w-7xl px-4 mx-auto py-8 sm:py-16">
-          <h2 className="text-center text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-8 sm:mb-12">
+        {/* Benefits Section */}
+        <div className="max-w-7xl px-4 sm:px-6 md:px-8 mx-auto py-8 sm:py-12 md:py-16">
+          <h2 className="text-center text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold mb-6 sm:mb-8 md:mb-12">
             <span className="text-black dark:text-white">Kısaca </span>
             <span className="text-[#DD3E34]">3</span>
             <span className="text-black dark:text-white"> Madde ile </span>
@@ -230,38 +256,24 @@ export default function Home() {
             </span>
           </h2>
 
-          <div className="max-w-7xl mx-auto grid grid-cols-1  md:grid-cols-3 gap-4 sm:gap-6 mt-8">
-            <div className="bg-[#E86C60] rounded-lg p-4 sm:p-6 border-2 sm:border-4 border-secondary relative">
-              <h3 className="text-lg sm:text-xl font-bold text-white mb-2 sm:mb-4">
-                Güncel ve Yetkin Müfredat
-              </h3>
-              <p className="text-white text-sm sm:text-base font-montserrat-mid">
-                Google'ın resmi kaynakları ve Jetpack Compose'un en son
-                sürümlerine göre hazırlanmış içeriklerle, sektörün ihtiyaçlarına
-                %100 uyumlu içerik.
-              </p>
-            </div>
-
-            <div className="bg-[#E86C60] rounded-lg p-4 sm:p-6 border-2 sm:border-4 border-secondary relative">
-              <h3 className="text-lg sm:text-xl font-bold text-white mb-2 sm:mb-4">
-                Proje Tabanlı Öğrenme
-              </h3>
-              <p className="text-white text-sm sm:text-base font-montserrat-mid">
-                Sadece teori değil! Her modülde gerçek dünya uygulamaları
-                geliştirerek portfolyonuzu şekillendirin. Farklı projeler ile
-                işverenlerin dikkatini çekin.
-              </p>
-            </div>
-
-            <div className="bg-[#E86C60] rounded-lg p-4 sm:p-6 border-2 sm:border-4 border-secondary relative">
-              <h3 className="text-lg sm:text-xl font-bold text-white mb-2 sm:mb-4">
-                Topluluk ve Mentor Desteği
-              </h3>
-              <p className="text-white text-sm sm:text-base font-montserrat-mid">
-                Türkçe kaynak eksikliğini ortadan kaldıran yerel bir toplulukla,
-                deneyimli mentörler eşliğinde sorunlarınızı anında çözün.
-              </p>
-            </div>
+          {/* Benefits Cards - Responsive Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-4 lg:gap-6 mt-8">
+            {bootcampBenefits.map((benefit, index) => (
+              <div
+                key={index}
+                className="relative group mx-auto w-full max-w-md md:max-w-none"
+              >
+                {/* Using box-shadow instead of translated element */}
+                <div className="bg-accent rounded-lg p-4 sm:p-5 md:p-6 border-2 sm:border-3 md:border-4 border-primary relative min-h-[150px] sm:min-h-[180px] md:min-h-[200px] flex flex-col justify-between shadow-[4px_4px_0px_0px_#41DF99]">
+                  <h3 className="text-base sm:text-lg md:text-xl font-bold text-white mb-2">
+                    {benefit.title}
+                  </h3>
+                  <p className="text-white text-xs sm:text-sm md:text-base font-montserrat-mid">
+                    {benefit.content}
+                  </p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
