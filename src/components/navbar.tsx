@@ -8,7 +8,7 @@ import {
   NavigationMenuItem,
   NavigationMenuList,
 } from "@/components/ui/navigation-menu";
-import { List } from "@phosphor-icons/react"; 
+import { List } from "@phosphor-icons/react";
 import Image from "next/image";
 
 const Navbar = () => {
@@ -36,7 +36,6 @@ const Navbar = () => {
     // { href: "/kaynaklar", label: "Kaynaklar" },
     { href: "/#konuşmacılar", label: "Konuşmacılar", isScroll: true },
     { href: "/#takvim", label: "Takvim", isScroll: true },
-    
   ];
 
   return (
@@ -66,7 +65,7 @@ const Navbar = () => {
                   >
                     <button
                       onClick={() => handleScrollOrRedirect(item.href)}
-                      className="text-lg font-bold text-white hover:text-secondary transition-colors"
+                      className="text-lg font-bold text-white hover:text-secondary transition-colors hover:cursor-pointer"
                     >
                       {item.label}
                     </button>
@@ -78,10 +77,16 @@ const Navbar = () => {
               variant="outline"
               className="relative h-11 px-6 text-zinc-900 group transition-all duration-300 ease-in-out"
             >
-              <a href="https://kommunity.com/devmultigroup/events/generativeai-fundamentals-with-gemini-64a8a503" target="_blank">
+              <a
+                href="https://kommunity.com/devmultigroup/events/generativeai-fundamentals-with-gemini-64a8a503"
+                target="_blank"
+              >
                 <div className="absolute inset-0 bg-accent transition-transform duration-300 ease-in-out rounded-md" />
                 <div className="absolute inset-0 bg-white group-hover:translate-x-2 group-hover:-translate-y-2 transition-all duration-300 ease-in-out rounded-md flex items-center justify-center">
-                  <span data-umami-event="Kommunity Başvuru" className="relative z-10 font-medium text-lg text-accent">
+                  <span
+                    data-umami-event="Kommunity Başvuru"
+                    className="relative z-10 font-medium text-lg text-accent"
+                  >
                     Başvur
                   </span>
                 </div>
@@ -133,7 +138,10 @@ const Navbar = () => {
               variant="outline"
               className="mt-6 rounded-lg text-lg text-black border-white px-8 py-3"
             >
-              <a href="https://kommunity.com/devmultigroup/events/generativeai-fundamentals-with-gemini-64a8a503" target="_blank">
+              <a
+                href="https://kommunity.com/devmultigroup/events/generativeai-fundamentals-with-gemini-64a8a503"
+                target="_blank"
+              >
                 Başvur
               </a>
             </Button>

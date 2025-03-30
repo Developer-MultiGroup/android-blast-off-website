@@ -66,8 +66,13 @@ export default function Home() {
               Başlamadan Önce
             </h2>
             <p className="text-white mb-4 font-montserrat-mid ">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem
+              Android geliştirmeye başlamak isteyenler için 
+              <span className="text-secondary">en güncel ve kapsamlı</span>{" "}
+              eğitim içeriği. Bu kursa adım atmadan önce tek yapmanız gereken
+              şey,{" "}
+              <span className="text-secondary">
+                kararlılıkla hedeflerinize odaklanmaktır.
+              </span>
             </p>
             <div className="flex justify-end group-hover:-translate-y-2 transition-all duration-300">
               <Image
@@ -85,8 +90,11 @@ export default function Home() {
               Bootcamp Hedefleri
             </h2>
             <p className="text-white mb-4 font-montserrat-mid">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem I
+              <span className="text-secondary">Kotlin ve Jetpack Compose</span>{" "}
+              kullanarak sıfırdan bir mobil uygulama geliştirebilecek, aynı
+              zamanda bu teknolojilerin{" "}
+              <span className="text-secondary">mantığını kavrayarak</span>{" "}
+              kendinizi ileri seviye içeriklere hazırlayabileceksiniz.
             </p>
             <div className="flex justify-end group-hover:-translate-y-2 transition-all duration-300">
               <Image
@@ -146,14 +154,17 @@ export default function Home() {
 
             <div className="flex flex-col justify-center">
               <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">
-                80% of people prefer live video over text
+                Canlı Kodlama ile %80 Daha Kalıcı Öğrenin!
               </h3>
               <p className="text-gray-600 dark:text-gray-300 mb-6">
-                People are tired of picture-perfect content and overly rehearsed
-                scripts. They want authentic stories and real human moments.
+                Araştırmalar gösteriyor ki video tabanlı eğitimler, metin
+                tabanlı kaynaklara göre 3 kat daha etkili öğrenme sağlıyor!
+                Bootcamp boyunca tüm dersleri gerçek zamanlı proje geliştirme
+                videolarıyla işliyoruz.
               </p>
               <p className="text-gray-600 dark:text-gray-300 mb-8">
-                Whether you're a creator, content marketer, business, or just
+                Bize katılın ve hiçbir detay atlanmadan, gerçek bir developer
+                workflow'uyla ilerleyin!
               </p>
               <div>
                 <button
@@ -186,16 +197,25 @@ export default function Home() {
             </div>
 
             <div className="grid grid-cols-2 gap-4">
-              {Array(10)
-                .fill(0)
-                .map((_, index) => (
-                  <div key={index} className="flex items-center space-x-2">
-                    <span className="w-3 h-3 sm:w-4 sm:h-4 rounded-full bg-secondary flex-shrink-0"></span>
-                    <span className="text-sm md:text-base font-medium">
-                      Your first Android app
-                    </span>
-                  </div>
-                ))}
+              {[
+                "Kotlin ile Modern Programlama Temelleri",
+                "Jetpack Compose ile Responsive UI Tasarımı",
+                "ViewModel & LiveData ile State Yönetimi",
+                "Compose Navigation ile Gezinme Sistemleri",
+                "Material Design 3 Uygulamaları",
+                "Room Database ile Lokal Veri Yönetimi",
+                "Retrofit & Coroutines ile Network İşlemleri",
+                "Clean Architecture & MVVM Pattern",
+                "Unit Test & UI Test Otomasyonu",
+                "Performans Optimizasyonu ve Debugging Teknikleri",
+              ].map((topic, index) => (
+                <div key={index} className="flex items-center space-x-2">
+                  <span className="w-3 h-3 sm:w-4 sm:h-4 rounded-full bg-secondary flex-shrink-0"></span>
+                  <span className="text-sm md:text-base font-medium">
+                    {topic}
+                  </span>
+                </div>
+              ))}
             </div>
           </div>
         </div>
@@ -206,38 +226,40 @@ export default function Home() {
             <span className="text-[#DD3E34]">3</span>
             <span className="text-black dark:text-white"> Madde ile </span>
             <span className="text-secondary">
-              Neden Bu Bootcampe Katılmalısın?
+              Neden Bu Bootcamp'e Katılmalısın?
             </span>
           </h2>
 
           <div className="max-w-7xl mx-auto grid grid-cols-1  md:grid-cols-3 gap-4 sm:gap-6 mt-8">
             <div className="bg-[#E86C60] rounded-lg p-4 sm:p-6 border-2 sm:border-4 border-secondary relative">
               <h3 className="text-lg sm:text-xl font-bold text-white mb-2 sm:mb-4">
-                Başlamadan Önce:
+                Güncel ve Yetkin Müfredat
               </h3>
               <p className="text-white text-sm sm:text-base font-montserrat-mid">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem
+                Google'ın resmi kaynakları ve Jetpack Compose'un en son
+                sürümlerine göre hazırlanmış içeriklerle, sektörün ihtiyaçlarına
+                %100 uyumlu içerik.
               </p>
             </div>
 
             <div className="bg-[#E86C60] rounded-lg p-4 sm:p-6 border-2 sm:border-4 border-secondary relative">
               <h3 className="text-lg sm:text-xl font-bold text-white mb-2 sm:mb-4">
-                Bootcamp Hedefleri
+                Proje Tabanlı Öğrenme
               </h3>
               <p className="text-white text-sm sm:text-base font-montserrat-mid">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem
+                Sadece teori değil! Her modülde gerçek dünya uygulamaları
+                geliştirerek portfolyonuzu şekillendirin. Farklı projeler ile
+                işverenlerin dikkatini çekin.
               </p>
             </div>
 
             <div className="bg-[#E86C60] rounded-lg p-4 sm:p-6 border-2 sm:border-4 border-secondary relative">
               <h3 className="text-lg sm:text-xl font-bold text-white mb-2 sm:mb-4">
-                Bootcamp Hedefleri
+                Topluluk ve Mentor Desteği
               </h3>
               <p className="text-white text-sm sm:text-base font-montserrat-mid">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem
+                Türkçe kaynak eksikliğini ortadan kaldıran yerel bir toplulukla,
+                deneyimli mentörler eşliğinde sorunlarınızı anında çözün.
               </p>
             </div>
           </div>
