@@ -51,14 +51,25 @@ export default function Home() {
     <>
       {/* Hero Section - Responsive for all devices */}
       <section className="min-h-screen bg-[#1F2326] flex flex-col items-center justify-center text-white relative px-4 sm:px-6 md:px-8">
-        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-tan-nimbus text-center leading-tight sm:leading-snug">
+        <h1 className="text-5xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-tan-nimbus text-center leading-tight sm:leading-snug">
           Android <span className="text-secondary">Blast Off</span>{" "}
         </h1>
-        <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl pt-4 font-extrabold font-montserrat-mid text-center">
+        <p className="text-xl sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl pt-4 md:pt-2 font-extrabold font-montserrat-mid text-center">
           <span className="text-accent">Jetpack Compose</span> Bootcamp
         </p>
-        <button className="px-4 py-2 bg-secondary rounded-lg mt-6 md:mt-8 text-black font-extrabold text-base sm:text-lg md:text-xl lg:text-2xl font-montserrat-mid hover:bg-opacity-90 transition-colors">
-          Tamamıyla Ücretsiz
+        <button
+          className="
+        relative text-xl md:text-2xl mt-8 py-1 md:py-2 px-4 md:px-6 font-semibold border-none cursor-pointer
+        inline-flex items-center gap-2 transition-all duration-250
+        bg-[#41DF9A] text-white rounded-lg
+        shadow-[inset_0_1px_0_0_#65e4a1,0_1px_0_0_#38d17e,0_3px_0_0_#35c979,0_5px_0_0_#31bd72,0_7px_0_0_#2eb46d,0_9px_0_0_#2bab68,0_11px_0_0_#28a263,0_11px_10px_0_rgba(40,162,99,0.5)]
+        hover:translate-y-[6px]
+        hover:shadow-[inset_0_1px_0_0_#65e4a1,0_1px_0_0_#38d17e,0_2px_0_0_#35c979,0_3px_0_0_#31bd72,0_4px_0_0_#2eb46d,0_5px_0_0_#2bab68,0_6px_0_0_#28a263,0_6px_8px_0_rgba(40,162,99,0.5)]
+        active:translate-y-[10px]
+        active:shadow-[inset_0_1px_0_0_#65e4a1,0_1px_0_0_#38d17e,0_1px_0_0_#35c979,0_1px_0_0_#31bd72,0_1px_0_0_#2eb46d,0_1px_0_0_#2bab68,0_2px_0_0_#28a263,0_2px_4px_0_rgba(40,162,99,0.5)]
+      "
+        >
+          <span>Tamamıyla Ücretsiz</span>
         </button>
 
         {/* Scroll Animation */}
@@ -81,7 +92,7 @@ export default function Home() {
       {/* Main Content Section */}
       <section className="bg-background">
         {/* Backdrop Containers Section - Centered and Responsive */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 p-4 sm:p-6 md:p-8 py-8 sm:py-12 md:py-16 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 p-4 sm:p-6 md:p-8 py-8 sm:py-12 md:py-24 max-w-7xl mx-auto">
           {/* First Backdrop Container */}
           <div className="relative group mx-auto w-full max-w-md md:max-w-none">
             {/* Shadow effect with fixed shadow size */}
@@ -140,7 +151,7 @@ export default function Home() {
         </div>
 
         {/* Jetpack Compose Section */}
-        <div className="max-w-7xl mx-auto py-8 sm:py-12 md:py-16 px-4 sm:px-6 md:px-8">
+        <div className="max-w-7xl mx-auto py-8 sm:py-12 md:py-12 px-4 sm:px-6 md:px-8">
           <h2 className="text-center text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-6 sm:mb-8">
             <span className="text-accent">Jetpack Compose</span>{" "}
             <span className="text-black dark:text-white">ile modern</span>{" "}
@@ -156,7 +167,7 @@ export default function Home() {
           </p>
 
           {/* Video and Text Section */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 md:gap-10 mt-8 sm:mt-12 md:mt-16 pt-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 md:gap-10 mt-8 sm:mt-12 md:mt-24 pt-8">
             {/* Video Container */}
             <div className="relative group mx-auto w-full max-w-lg lg:max-w-none">
               {/* Using fixed box-shadow instead of translating element */}
