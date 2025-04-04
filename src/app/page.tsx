@@ -61,8 +61,8 @@ export default function Home() {
         <h1 className="text-5xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-tan-nimbus text-center leading-tight sm:leading-snug">
           Android <span className="text-secondary">Blast Off</span>{" "}
         </h1>
-        <p className="text-xl sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-extrabold font-montserrat-mid text-center">
-          <span className="text-accent">Jetpack Compose</span> Bootcamp
+        <p className="text-xl sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-extrabold font-montserrat-mid text-center text-accent">
+          Jetpack Compose Bootcamp
         </p>
         <button
           onClick={handleScroll}
@@ -95,12 +95,13 @@ export default function Home() {
         </div>
       </section>
 
+      <span id="main" />
       <GoogleLogoInfiniteScroll />
 
       {/* Main Content Section */}
       <div className="bg-background">
         {/* Second Info Section */}
-        <section id="main" className="bg-background min-h-screen flex flex-col items-center align-middle justify-center">
+        <section className="bg-background">
           {/* Backdrop Containers Section - Centered and Responsive */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 p-4 sm:p-6 md:p-8 py-8 sm:py-12 md:py-24 max-w-7xl mx-auto">
             {/* First Backdrop Container */}
@@ -110,7 +111,7 @@ export default function Home() {
                 <h2 className="text-xl sm:text-2xl font-bold text-white mb-3">
                   Başlamadan Önce
                 </h2>
-                <p className="text-white mb-4 font-montserrat-mid text-sm sm:text-base">
+                <p className="text-white mb-4 font-montserrat-mid text-sm sm:text-base w-5/6">
                   Android geliştirmeye başlamak isteyenler için{" "}
                   <span className="text-secondary">en güncel ve kapsamlı</span>{" "}
                   eğitim içeriği. Bu kursa adım atmadan önce tek yapmanız
@@ -138,7 +139,7 @@ export default function Home() {
                 <h2 className="text-xl sm:text-2xl font-bold text-white mb-3">
                   Bootcamp Hedefleri
                 </h2>
-                <p className="text-white mb-4 font-montserrat-mid text-sm sm:text-base">
+                <p className="text-white mb-4 font-montserrat-mid text-sm sm:text-base w-5/6">
                   <span className="text-secondary">
                     Kotlin ve Jetpack Compose
                   </span>{" "}
@@ -179,7 +180,7 @@ export default function Home() {
         </section>
 
         {/* Video and Text Section */}
-        <section className="max-w-5/6 xl:max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 md:gap-10 pb-24 md:pb-48 lg:pb-64">
+        <section className="max-w-5/6 xl:max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 sm:gap-24 md:gap-30 pb-36 md:pb-64 lg:pb-64 pt-12 md:pt-24 lg:pt-32 ">
           {/* Video Container */}
           <div className="relative group mx-auto w-full max-w-lg lg:max-w-none my-auto">
             {/* Using fixed box-shadow instead of translating element */}
@@ -207,13 +208,9 @@ export default function Home() {
               boyunca tüm dersleri gerçek zamanlı proje geliştirme videolarıyla
               işliyoruz.
             </p>
-            <p className="text-gray-600 dark:text-gray-300 mb-6 sm:mb-8 text-sm sm:text-base">
-              Bize katılın ve hiçbir detay atlanmadan, gerçek bir developer
-              workflow'uyla ilerleyin!
-            </p>
             <div>
               <button
-                className="px-4 sm:px-6 py-2 sm:py-3 bg-primary text-white rounded-md font-medium hover:bg-opacity-90 transition-colors text-sm sm:text-base hover:cursor-pointer"
+                className="px-4 sm:px-6 py-2 sm:py-3 bg-primary text-white rounded-md font-medium hover:bg-opacity-90 text-sm sm:text-base hover:cursor-pointer border-4 border-primary hover:border-secondary transition-all duration-300"
                 onClick={handleLessonRoute}
               >
                 Eğitimler
@@ -228,12 +225,12 @@ export default function Home() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 md:gap-10">
               {/* Google Text */}
               <div className="flex flex-col justify-center">
-                <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-6 sm:mb-8 flex flex-wrap items-center">
+                <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold mb-6 sm:mb-8 flex flex-wrap items-center">
                   {/* Google logosu */}
                   <img
                     src="/google-logo.png"
                     alt="Google Logo"
-                    className="w-auto h-8 sm:h-10  md:h-12  lg:h-14 mr-2"
+                    className="w-auto h-12 sm:h-14  md:h-16  lg:h-18 mr-2"
                   />
                   <span className="text-black dark:text-white">
                     'ın Hazırladığı&nbsp;
@@ -256,14 +253,18 @@ export default function Home() {
                   "Unit Test & UI Test Otomasyonu",
                   "Performans Optimizasyonu ve Debugging Teknikleri",
                 ].map((topic, index) => (
-                  <div key={index} className="flex items-center space-x-2">
+                  <div
+                    key={index}
+                    className="flex items-center space-x-2 group cursor-pointer transition-all duration-300 ease-in-out"
+                  >
                     <img
                       src="/jetpack-compose.svg"
                       alt="Android Icon"
-                      className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 flex-shrink-0"
+                      className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 flex-shrink-0 transition-transform duration-300 group-hover:rotate-90"
                     />
-                    <span className="text-xs sm:text-sm md:text-base font-medium">
+                    <span className="text-xs sm:text-sm md:text-base font-medium transition-all duration-300 group-hover:translate-x-2 relative">
                       {topic}
+                      <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-secondary transition-all duration-300 group-hover:w-full"></span>
                     </span>
                   </div>
                 ))}
