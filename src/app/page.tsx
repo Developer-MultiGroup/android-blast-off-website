@@ -202,7 +202,7 @@ export default function Home() {
             <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4">
               Canlı Kodlama ile %80 Daha Kalıcı Öğrenin!
             </h3>
-            <p className="text-gray-600 dark:text-gray-300 mb-4 sm:mb-6 text-sm sm:text-base">
+            <p className="text-gray-600 dark:text-gray-300 my-4 sm:my-6 text-sm sm:text-base">
               Araştırmalar gösteriyor ki video tabanlı eğitimler, metin tabanlı
               kaynaklara göre 3 kat daha etkili öğrenme sağlıyor! Bootcamp
               boyunca tüm dersleri gerçek zamanlı proje geliştirme videolarıyla
@@ -222,7 +222,7 @@ export default function Home() {
         {/* Google Content Section */}
         <section className="bg-[#F8F9FB]">
           <div className="max-w-7xl mx-auto py-12 sm:py-16 md:py-24 lg:py-32 px-4 sm:px-6 md:px-8">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 md:gap-10">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-12 lg:gap-36">
               {/* Google Text */}
               <div className="flex flex-col justify-center">
                 <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold mb-6 sm:mb-8 flex flex-wrap items-center">
@@ -230,7 +230,7 @@ export default function Home() {
                   <img
                     src="/google-logo.png"
                     alt="Google Logo"
-                    className="w-auto h-12 sm:h-14  md:h-16  lg:h-18 mr-2"
+                    className="w-auto h-10 sm:h-12  md:h-14  lg:h-16 mr-2"
                   />
                   <span className="text-black dark:text-white">
                     'ın Hazırladığı&nbsp;
@@ -264,7 +264,7 @@ export default function Home() {
                     />
                     <span className="text-xs sm:text-sm md:text-base font-medium transition-all duration-300 group-hover:translate-x-2 relative">
                       {topic}
-                      <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-secondary transition-all duration-300 group-hover:w-full"></span>
+                      <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-secondary transition-all duration-300 group-hover:w-5/6"></span>
                     </span>
                   </div>
                 ))}
