@@ -12,6 +12,7 @@ import {
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
+import FloatingActionButton from "./floating-action-button";
 
 export default function Footer() {
   const [showButton, setShowButton] = useState(false);
@@ -104,14 +105,15 @@ export default function Footer() {
           </Link>
         </div>
       </div>
-      {showButton && (
+      {/* {showButton && (
         <motion.button
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
           className="fixed bottom-8 right-8 bg-secondary text-white p-3 rounded-full shadow-lg hover:secondary/60 transition hover:cursor-pointer"
         >
           <ArrowUp />
         </motion.button>
-      )}
+      )} */}
+      <FloatingActionButton />
     </footer>
   );
 }

@@ -36,6 +36,7 @@ const Navbar = () => {
     // { href: "/kaynaklar", label: "Kaynaklar" },
     { href: "/#konuşmacılar", label: "Konuşmacılar", isScroll: true },
     { href: "/#takvim", label: "Takvim", isScroll: true },
+    { href: "/kaynaklar", label: "Kaynaklar" },
   ];
 
   return (
