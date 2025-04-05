@@ -2,9 +2,8 @@
 
 import Image from "next/image";
 import GoogleLogoInfiniteScroll from "../components/GoogleInfiniteScroll";
-import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
-import { ChevronDown } from "lucide-react";
+import { ChevronsDownIcon } from "lucide-react";
 
 const bootcampBenefits = [
   {
@@ -25,12 +24,6 @@ const bootcampBenefits = [
 ];
 
 export default function Home() {
-  const route = useRouter();
-
-  function handleLessonRoute() {
-    route.push("https://www.youtube.com/@devmultigroup");
-  }
-
   const [isVisible, setIsVisible] = useState(true);
 
   // Hide the scroll indicator when user scrolls down
@@ -77,7 +70,7 @@ export default function Home() {
         active:shadow-[inset_0_1px_0_0_#65e4a1,0_1px_0_0_#38d17e,0_1px_0_0_#35c979,0_1px_0_0_#31bd72,0_1px_0_0_#2eb46d,0_1px_0_0_#2bab68,0_2px_0_0_#28a263,0_2px_4px_0_rgba(40,162,99,0.5)]
       "
         >
-          <span>Tamamıyla Ücretsiz</span>
+          <span>Öğrenmeye Başla</span>
         </button>
 
         {/* Scroll Animation */}
@@ -86,11 +79,11 @@ export default function Home() {
             isVisible ? "opacity-100" : "opacity-0"
           }`}
         >
-          <p className="text-base sm:text-lg md:text-xl mb-2 text-secondary font-montserrat-mid">
+          {/* <p className="text-base sm:text-lg md:text-xl mb-2 text-secondary font-montserrat-mid">
             Öğrenmeye Başla
-          </p>
+          </p> */}
           <div className="animate-bounce bg-primary rounded-full p-2">
-            <ChevronDown className="h-5 w-5 sm:h-6 sm:w-6 text-secondary" />
+            <ChevronsDownIcon className="h-10 w-10 sm:h-15 sm:w-15 text-secondary" />
           </div>
         </div>
       </section>
@@ -111,7 +104,7 @@ export default function Home() {
                 <h2 className="text-xl sm:text-2xl font-bold text-white mb-3">
                   Başlamadan Önce
                 </h2>
-                <p className="text-white mb-4 font-montserrat-mid text-sm sm:text-base w-5/6">
+                <p className="text-white mb-4 font-montserrat-mid text-sm sm:text-base w-5/6 text-left md:text-justify">
                   Android geliştirmeye başlamak isteyenler için{" "}
                   <span className="text-secondary">en güncel ve kapsamlı</span>{" "}
                   eğitim içeriği. Bu kursa adım atmadan önce tek yapmanız
@@ -139,8 +132,8 @@ export default function Home() {
                 <h2 className="text-xl sm:text-2xl font-bold text-white mb-3">
                   Bootcamp Hedefleri
                 </h2>
-                <p className="text-white mb-4 font-montserrat-mid text-sm sm:text-base w-5/6">
-                  <span className="text-secondary">
+                <p className="text-white mb-4 font-montserrat-mid text-sm sm:text-base w-5/6 text-left md:text-justify">
+                  <span className="text-secondar">
                     Kotlin ve Jetpack Compose
                   </span>{" "}
                   kullanarak sıfırdan bir mobil uygulama geliştirebilecek, aynı
@@ -164,11 +157,13 @@ export default function Home() {
           {/* Jetpack Compose Section */}
           <div className="max-w-7xl mx-auto py-8 sm:py-12 md:py-12 px-4 sm:px-6 md:px-8">
             <h2 className="text-center text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-6 sm:mb-8">
-              <span className="text-accent">Jetpack Compose</span>{" "}
+              <span className="text-accent text-stroke">Jetpack Compose</span>{" "}
               <span className="text-black dark:text-white">ile modern</span>{" "}
-              <span className="text-secondary">Android</span>{" "}
+              <span className="text-secondary text-stroke">Android</span>{" "}
               <br className="sm:hidden" />
-              <span className="text-secondary">geliştirmeye</span>{" "}
+              <span className="text-secondary text-stroke">
+                geliştirmeye
+              </span>{" "}
               <span className="text-black dark:text-white">ilk adımı at!</span>
             </h2>
 
@@ -202,18 +197,29 @@ export default function Home() {
             <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4">
               Canlı Kodlama ile %80 Daha Kalıcı Öğrenin!
             </h3>
-            <p className="text-gray-600 dark:text-gray-300 my-4 sm:my-6 text-sm sm:text-base">
+            <p className="text-gray-600 dark:text-gray-300 my-4 sm:my-6 text-sm sm:text-base text-justify">
               Araştırmalar gösteriyor ki video tabanlı eğitimler, metin tabanlı
               kaynaklara göre 3 kat daha etkili öğrenme sağlıyor! Bootcamp
               boyunca tüm dersleri gerçek zamanlı proje geliştirme videolarıyla
               işliyoruz.
             </p>
-            <div>
-              <button
-                className="px-4 sm:px-6 py-2 sm:py-3 bg-primary text-white rounded-md font-medium hover:bg-opacity-90 text-sm sm:text-base hover:cursor-pointer border-4 border-primary hover:border-secondary transition-all duration-300"
-                onClick={handleLessonRoute}
-              >
-                Eğitimler
+            <div className="flex justify-center lg:justify-start">
+              <button className="relative h-11 px-6 text-zinc-900 group transition-all duration-300 ease-in-out">
+                <a
+                  href="https://www.youtube.com/@devmultigroup"
+                  target="_blank"
+                >
+                  <div className="absolute inset-0 bg-secondary transition-transform duration-300 ease-in-out rounded-md" />
+                  <div className="absolute inset-0 bg-primary group-hover:translate-x-2 group-hover:-translate-y-2 transition-all duration-300 ease-in-out rounded-md flex items-center justify-center">
+                    <span
+                      data-umami-event="Youtube Link"
+                      className="relative z-10 font-medium text-md text-white"
+                    >
+                      Eğitimler
+                    </span>
+                  </div>
+                </a>
+                <span className="invisible font-medium text-sm">Kayıt Ol</span>
               </button>
             </div>
           </div>
@@ -225,17 +231,22 @@ export default function Home() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-12 lg:gap-36">
               {/* Google Text */}
               <div className="flex flex-col justify-center">
-                <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold mb-6 sm:mb-8 flex flex-wrap items-center">
+                <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold mb-6 sm:mb-8 flex flex-wrap items-center justify-center text-center md:justify-start md:text-left">
                   {/* Google logosu */}
                   <img
                     src="/google-logo.png"
                     alt="Google Logo"
-                    className="w-auto h-10 sm:h-12  md:h-14  lg:h-16 mr-2"
+                    className="w-auto h-8 sm:h-10  md:h-12  lg:h-14 mr-2"
                   />
                   <span className="text-black dark:text-white">
                     'ın Hazırladığı&nbsp;
                   </span>
-                  <span>En Güncel İçeriği Sizin İçin Düzenledik</span>
+                  <span className="leading-relaxed">
+                    <span className="text-stroke text-secondary">
+                      En Güncel
+                    </span>{" "}
+                    İçeriği Sizin İçin Düzenledik
+                  </span>
                 </h2>
               </div>
 
@@ -275,11 +286,11 @@ export default function Home() {
 
         {/* Benefits Section */}
         <section className="max-w-7xl px-4 sm:px-6 md:px-8 mx-auto py-12 sm:py-18 md:py-48">
-          <h2 className="text-center text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold mb-6 sm:mb-8 md:mb-12">
+          <h2 className="text-center text-2xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold mb-6 sm:mb-8 md:mb-12">
             <span className="text-black dark:text-white">Kısaca </span>
-            <span className="text-[#DD3E34]">3</span>
+            <span className="text-[#DD3E34] text-stroke">3</span>
             <span className="text-black dark:text-white"> Madde ile </span>
-            <span className="text-secondary">
+            <span className="text-secondary text-stroke">
               Neden Bu Bootcamp'e Katılmalısın?
             </span>
           </h2>
@@ -296,7 +307,7 @@ export default function Home() {
                   <h3 className="text-base sm:text-lg md:text-xl font-bold text-white mb-2">
                     {benefit.title}
                   </h3>
-                  <p className="text-white text-xs sm:text-sm md:text-base font-montserrat-mid">
+                  <p className="text-white text-xs sm:text-sm md:text-base font-montserrat-mid text-justify">
                     {benefit.content}
                   </p>
                 </div>
