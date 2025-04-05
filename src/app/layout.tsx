@@ -4,7 +4,7 @@ import "./globals.css";
 import Navbar from "../components/navbar";
 import Script from "next/script";
 import Footer from "../components/footer";
-
+import { ResourceProvider } from "@/context/ResourceContext";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -35,12 +35,12 @@ export default function RootLayout({
           data-website-id={process.env.UMAMI_PROJECT_ID}
         ></Script>
       </head>
-      <body
-        className="font-montserrat"
-      >
-        <Navbar/>
-        {children}
-        <Footer/>
+      <body className="font-montserrat">
+        <ResourceProvider>
+          <Navbar />
+          {children}
+          <Footer />
+        </ResourceProvider>
       </body>
     </html>
   );

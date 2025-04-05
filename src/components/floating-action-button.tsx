@@ -47,7 +47,7 @@ const FloatingActionButton = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const shouldShow = window.scrollY > window.innerHeight * 0.5;
+      const shouldShow = window.scrollY > window.innerHeight * 0.2;
       setShowButton(shouldShow);
     };
 
@@ -89,7 +89,7 @@ const FloatingActionButton = () => {
         <img
           src="/logo-small-android-2.png"
           alt="Toggle Button Icon"
-          className={`select-none absolute inset-0 w-2/3 h-2/3 object-contain transition-transform duration-300 mx-auto my-auto ${
+          className={`select-none absolute inset-0 w-1/2 h-1/2 object-contain transition-transform duration-300 mx-auto my-auto ${
             isActive ? "rotate-180" : ""
           }`}
         />
