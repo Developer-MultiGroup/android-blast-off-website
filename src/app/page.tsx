@@ -4,6 +4,7 @@ import Image from "next/image";
 import GoogleLogoInfiniteScroll from "../components/GoogleInfiniteScroll";
 import { useEffect, useState } from "react";
 import { ChevronDownIcon } from "lucide-react";
+import FloatingActionButton from "@/components/floating-action-button";
 
 const bootcampBenefits = [
   {
@@ -163,7 +164,9 @@ export default function Home() {
             <h2 className="text-center text-3xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-6 sm:mb-8">
               <span className="text-accent text-stroke">Jetpack Compose</span>{" "}
               <span className="text-black dark:text-white">ile modern</span>{" "}
-              <span className="text-secondary text-stroke underline underline-offset-3 md:no-underline decoration-secondary">Android</span>{" "}
+              <span className="text-secondary text-stroke underline underline-offset-3 md:no-underline decoration-secondary">
+                Android
+              </span>{" "}
               <br className="sm:hidden" />
               <span className="text-secondary text-stroke underline underline-offset-3 md:no-underline decoration-secondary">
                 geliştirmeye
@@ -202,10 +205,9 @@ export default function Home() {
               Canlı Kodlama ile %80 Daha Kalıcı Öğrenin!
             </h3>
             <p className="text-gray-600 dark:text-gray-300 my-4 sm:my-6 text-sm sm:text-base text-justify">
-              Araştırmalar gösteriyor ki video tabanlı eğitimler, metin tabanlı
-              kaynaklara göre 3 kat daha etkili öğrenme sağlıyor! Bootcamp
-              boyunca tüm dersleri gerçek zamanlı proje geliştirme videolarıyla
-              işliyoruz.
+              Canlı ve online eğitimlerle yalnızca bilgi edinmekle kalmayın;
+              eğitimi, anında sorular sorarak size özel hale getirin. Sonuçta en
+              iyi nasıl öğrendiğinizi sizden iyi kim bilebilir ki?
             </p>
             <div className="flex justify-center lg:justify-start">
               <button className="relative h-11 px-6 text-zinc-900 group transition-all duration-300 ease-in-out">
@@ -321,6 +323,7 @@ export default function Home() {
         </section>
       </div>
       <GoogleLogoInfiniteScroll />
+      <FloatingActionButton alwaysShow={false} />
     </>
   );
 }

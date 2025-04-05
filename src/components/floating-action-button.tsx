@@ -8,9 +8,9 @@ import {
 } from "@phosphor-icons/react";
 import { useState, useEffect } from "react";
 
-const FloatingActionButton = () => {
+const FloatingActionButton = ({alwaysShow}: {alwaysShow: boolean}) => {
   const [isActive, setIsActive] = useState(false);
-  const [showButton, setShowButton] = useState(false);
+  const [showButton, setShowButton] = useState(alwaysShow);
 
   const socialItems = [
     {
@@ -47,7 +47,7 @@ const FloatingActionButton = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const shouldShow = window.scrollY > window.innerHeight * 0.2;
+      const shouldShow = alwaysShow ? true : window.scrollY > window.innerHeight * 0.2;
       setShowButton(shouldShow);
     };
 

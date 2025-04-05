@@ -113,7 +113,7 @@ export default function Footer() {
           <ArrowUp />
         </motion.button>
       )} */}
-      <FloatingActionButton />
+      
     </footer>
   );
 }

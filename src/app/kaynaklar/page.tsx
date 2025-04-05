@@ -14,6 +14,7 @@ import {
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { useResourceContext } from "@/context/ResourceContext";
+import FloatingActionButton from "@/components/floating-action-button";
 
 // Breakpoint object for masonry grid
 const breakpointColumnsObj = {
@@ -159,9 +160,7 @@ export default function ResourcePage() {
             transition={{ duration: 0.5, delay: 0.2 }}
           >
             Kaynak{" "}
-            <span className="bg-gradient-to-r text-secondary">
-              Kütüphanesi
-            </span>
+            <span className="bg-gradient-to-r text-secondary">Kütüphanesi</span>
           </motion.h1>
           <motion.p
             className="text-gray-400 mb-8 max-w-2xl mx-auto text-sm md:text-base font-montserrat-mid"
@@ -242,7 +241,7 @@ export default function ResourcePage() {
             transition={{ duration: 0.5, delay: 0.6 }}
           >
             <motion.a
-              href="https://github.com/Developer-MultiGroup/DMG-Data-Science-Awesome"
+              href="https://github.com/Developer-MultiGroup"
               data-umami-event="Add Resource Github"
               target="_blank"
               rel="noopener noreferrer"
@@ -250,7 +249,7 @@ export default function ResourcePage() {
               initial="initial"
               whileHover="hover"
               whileTap="tap"
-              className="font-montserrat-mid flex items-center gap-1 bg-secondary  text-white font-medium shadow-md hover:shadow-lg transition-all duration-200 border border-[#3682F1]/30 rounded-full px-4 py-2"
+              className="font-montserrat-mid flex items-center gap-1 bg-green-900  text-white font-medium shadow-md hover:shadow-lg transition-all duration-200 border border-secondary/30 rounded-full px-4 py-2"
             >
               <Plus className="h-5 w-5" />
               <span>Yeni Kaynak Ekle</span>
@@ -309,10 +308,10 @@ export default function ResourcePage() {
                     whileHover={{ y: -5 }}
                     transition={{ type: "spring", stiffness: 300 }}
                   >
-                    <Card className="mb-6 bg-secondary/70 backdrop-blur-sm border border-gray-600/30 hover:border-accent hover:bg- hover:shadow-lg hover:shadow-gray-900/20 transition-all duration-300 group overflow-hidden rounded-xl will-change-transform">
+                    <Card className="font-montserrat-mid mb-6 bg-gray-800/70 backdrop-blur-sm border border-gray-600/30 hover:border-accent hover:bg-gray-800/80 hover:shadow-lg hover:shadow-gray-900/20 transition-all duration-300 group overflow-hidden rounded-xl will-change-transform">
                       <CardHeader className="pb-2">
                         {resource.lesson && (
-                          <div className="text-green-900 text-sm mt-1 mb-2">
+                          <div className="text-secondary text-sm mt-1 mb-2">
                             {resource.lesson}
                           </div>
                         )}
@@ -321,7 +320,7 @@ export default function ResourcePage() {
                         </CardTitle>
                       </CardHeader>
 
-                      <CardContent className="text-white/90 text-sm md:text-base font-montserrat-mid">
+                      <CardContent className="text-white/90 text-sm md:text-base">
                         <p className="whitespace-pre-wrap">
                           {resource.description}
                         </p>
@@ -330,7 +329,7 @@ export default function ResourcePage() {
                             {resource.tags.split(",").map((tag, tagIndex) => (
                               <span
                                 key={tagIndex}
-                                className="px-2 py-1 rounded-full bg-green-900/70 text-[#f0f8ff] text-xs font-medium"
+                                className="px-2 py-1 rounded-full bg-secondary/70 text-[#f0f8ff] text-xs font-medium"
                               >
                                 {tag.trim()}
                               </span>
@@ -351,7 +350,7 @@ export default function ResourcePage() {
                             whileTap={{ scale: 0.95 }}
                           >
                             <Button
-                              className="hover:cursor-pointer bg-green-900 hover:bg-green-950 text-white font-medium shadow-md hover:shadow-lg transition-all duration-200 border border-gray-500/30"
+                              className="bg-gray-700/90 hover:bg-gray-600/90 text-white font-medium shadow-md hover:shadow-lg transition-all duration-200 border border-gray-500/30"
                               aria-label="kaynak linki"
                               data-umami-event={resource.name}
                             >
@@ -403,6 +402,7 @@ export default function ResourcePage() {
           </motion.div>
         )}
       </motion.div>
+      <FloatingActionButton alwaysShow={true} />
     </div>
   );
 }
