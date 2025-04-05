@@ -101,7 +101,7 @@ export default function Home() {
         {/* Second Info Section */}
         <section className="bg-background">
           {/* Backdrop Containers Section - Centered and Responsive */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 p-4 sm:p-6 md:p-8 py-8 sm:py-12 md:py-24 max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 px-6 xl:px-0 py-8 sm:py-12 md:py-24 max-w-7xl mx-auto">
             {/* First Backdrop Container */}
             <div className="relative group mx-auto w-full max-w-md md:max-w-none">
               {/* Shadow effect with fixed shadow size */}

@@ -135,19 +135,19 @@ export default function SessionContainer({ event }: SessionContainerProps) {
             className="overflow-hidden"
           >
             <motion.div
-              className="p-4 bg-blue-50 rounded-lg border border-blue-200"
+              className="p-4 bg-green-50 rounded-lg border border-green-200"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.3, delay: 0.1 }}
             >
               <div className="flex flex-col md:flex-row justify-between items-start gap-2 md:items-center mb-4">
-                <h3 className="text-lg font-bold text-blue-700">
+                <h3 className="text-lg font-bold text-green-700">
                   Seçilen Oturumlar ({selectedSessions.length})
                 </h3>
                 <Button
                   data-umami-event="Generate Custom Calendar"
                   onClick={() => handleCalendarDownload(selectedSessions)}
-                  className="bg-blue-500 hover:bg-blue-600 active:bg-blue-800 shadow-md"
+                  className="bg-green-500 hover:bg-green-600 active:bg-green-800 shadow-md"
                 >
                   <Calendar className="mr-2" size={16} />
                   Seçilenleri Ekle
@@ -170,13 +170,13 @@ export default function SessionContainer({ event }: SessionContainerProps) {
                       layout
                     >
                       <Badge
-                        className="bg-blue-200 text-blue-800 hover:bg-blue-300 cursor-pointer flex items-center gap-1 p-2"
+                        className="bg-green-200 text-green-800 hover:bg-green-300 cursor-pointer flex items-center gap-1 p-2"
                         onClick={() => toggleSessionSelection(session)}
                       >
                         <span className="font-medium">{session.startTime}</span>
                         <span className="mx-1">-</span>
                         <span>{session.speakerName}</span>
-                        <button className="ml-1 text-blue-700 hover:text-blue-900">
+                        <button className="ml-1 text-green-700 hover:text-green-900">
                           ×
                         </button>
                       </Badge>
@@ -235,29 +235,26 @@ export default function SessionContainer({ event }: SessionContainerProps) {
                 s.topic === session.topic
             );
             return (
-              <Card
+                <Card
                 key={`session-card-${session.speakerName}-${session.topic}`}
-                className={`select-none bg-white shadow-lg w-full mx-auto transition-all overflow-hidden ${
-                  isSelected ? "ring-2 ring-blue-500" : ""
+                className={`select-none bg-white shadow-lg w-full mx-auto transition-all overflow-hidden h-full py-0 ${
+                  isSelected ? "ring-2 ring-green-500" : ""
                 }`}
               >
                 <div className="flex h-full">
-                  <div className="relative  min-w-[120px] bg-indigo-900 overflow-hidden w-[160px] h-[160px]">
+                  <div className="relative min-w-[160px] w-[160px] h-full bg-indigo-900 overflow-hidden shrink-0">
                     <Image
-                      src={`/images/speakers/${slugify(
-                        session.speakerName
-                      )}.webp`}
+                      src={`/images/speakers/${slugify(session.speakerName)}.webp`}
                       alt={session.speakerName}
                       fill
-                      sizes="(max-width: 768px) 120px, 25vw"
-                      className="object-cover object-center opacity-80"
+                      sizes="160px"
+                      className="object-cover object-center opacity-80 h-full w-full"
                       loading="lazy"
-                      style={{ display: "block" }}
                     />
                   </div>
                   <div
                     className={`flex-1 p-6 flex items-start justify-between relative hover:cursor-pointer ${
-                      isSelected ? "bg-blue-50" : "bg-white"
+                      isSelected ? "bg-green-50" : "bg-white"
                     }`}
                     onClick={() => {
                       toggleSessionSelection(session);
@@ -273,7 +270,7 @@ export default function SessionContainer({ event }: SessionContainerProps) {
                       <p className="text-xl font-bold text-gray-900 mt-1">
                         {session.speakerName}
                       </p>
-                      <p className="text-blue-600 text-sm mt-1">
+                      <p className="text-green-600 text-sm mt-1">
                         {session.topic}
                       </p>
                       {session.url && (
@@ -281,8 +278,7 @@ export default function SessionContainer({ event }: SessionContainerProps) {
                           href={session.url}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="inline-flex items-center gap-1 mt-2 text-sm font-medium"
-                          style={{ color: "#C55E85" }}
+                          className="inline-flex items-center gap-1 mt-2 text-sm font-medium text-accent"
                           aria-label={`Watch ${session.topic} by ${session.speakerName} on YouTube`}
                         >
                           <span className="hover:underline hover:cursor">
@@ -299,8 +295,8 @@ export default function SessionContainer({ event }: SessionContainerProps) {
                         onCheckedChange={() => toggleSessionSelection(session)}
                         className={`${
                           isSelected
-                            ? "bg-blue-500 text-white"
-                            : "border-blue-500"
+                            ? "bg-green-500 text-white"
+                            : "border-green-500"
                         }`}
                       />
                     </div>
