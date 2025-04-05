@@ -1,10 +1,10 @@
 "use client";
-import React, { useState } from "react";
+import type React from "react";
+import { useState } from "react";
 import { Card } from "@/components/ui/card";
-import { Speaker } from "@/types";
+import type { Speaker } from "@/types";
 import { slugify } from "@/lib/slugify";
 import Image from "next/image";
-import { InstagramLogo, LinkedinLogo, XLogo } from "@phosphor-icons/react";
 
 interface SpeakerCarouselProps {
   speakers: Speaker[];
@@ -21,12 +21,12 @@ const Speakers: React.FC<SpeakerCarouselProps> = ({ speakers }) => {
   };
 
   return (
-    <section className="max-w-7xl sm:w-5/6 mx-auto md:px-0 px-4 font-montserrat-mid">
+    <section className="w-full max-w-7xl mx-auto px-4 sm:px-6 font-montserrat-mid">
       <div className="flex flex-wrap justify-center gap-4">
         {speakers.map((speaker) => (
           <div
             key={speaker.fullName}
-            className={`h-[250px] w-full sm:w-[calc(50%-8px)] md:w-[calc(33.333%-11px)] lg:w-[calc(25%-12px)] xl:w-[calc(20%-13px)] cursor-pointer group [perspective:1000px] ${
+            className={`w-[200px] h-[250px] cursor-pointer group [perspective:1000px] ${
               flippedCards[speaker.fullName] ? "flip-active" : ""
             }`}
             onClick={() => handleCardClick(speaker.fullName)}
@@ -44,7 +44,7 @@ const Speakers: React.FC<SpeakerCarouselProps> = ({ speakers }) => {
                   <Image
                     src={`/images/speakers/${slugify(speaker.fullName)}.webp`}
                     alt={speaker.fullName}
-                    className="object-cover object-center"
+                    className="object-cover object-[top_center] sm:object-center"
                     fill
                     sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, (max-width: 1280px) 25vw, 20vw"
                     loading="lazy"
@@ -64,7 +64,6 @@ const Speakers: React.FC<SpeakerCarouselProps> = ({ speakers }) => {
                   </p>
                 </div>
 
-
                 {speaker.company && (
                   <div className="flex justify-center w-full h-12 mt-2">
                     <div className="relative w-24 h-12">
@@ -81,44 +80,6 @@ const Speakers: React.FC<SpeakerCarouselProps> = ({ speakers }) => {
                     </div>
                   </div>
                 )}
-                {/* <div className="flex justify-center gap-3 mt-3 pb-1">
-                  {speaker.instagram && (
-                    <a
-                      href={speaker.instagram}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      onClick={(e) => e.stopPropagation()}
-                      className="text-pink-600 hover:text-pink-700 transition-colors"
-                      aria-label="konuşmacı instagram hesabı"
-                    >
-                      <InstagramLogo size={24} weight="fill" />
-                    </a>
-                  )}
-                  {speaker.linkedin && (
-                    <a
-                      href={speaker.linkedin}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      onClick={(e) => e.stopPropagation()}
-                      className="text-blue-600 hover:text-blue-700 transition-colors"
-                      aria-label="konuşmacı linkedin hesabı"
-                    >
-                      <LinkedinLogo size={24} weight="fill" />
-                    </a>
-                  )}
-                  {speaker.twitter && (
-                    <a
-                      href={speaker.twitter}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      onClick={(e) => e.stopPropagation()}
-                      className="text-black hover:text-gray-700 transition-colors"
-                      aria-label="konuşmacı x hesabı"
-                    >
-                      <XLogo size={24} />
-                    </a>
-                  )}
-                </div> */}
               </Card>
             </div>
           </div>
