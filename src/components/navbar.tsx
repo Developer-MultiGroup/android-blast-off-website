@@ -34,8 +34,8 @@ const Navbar = () => {
   const navigationItems = [
     { href: "/", label: "Anasayfa" },
     { href: "/kaynaklar", label: "Kaynaklar" },
-    { href: "/#konuşmacılar", label: "Konuşmacılar", isScroll: true },
-    { href: "/#takvim", label: "Takvim", isScroll: true },
+    { href: "/konusmacilar", label: "Konuşmacılar", isScroll: true },
+    { href: "/takvim", label: "Takvim", isScroll: true },
   ];
 
   return (

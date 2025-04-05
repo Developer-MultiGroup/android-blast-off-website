@@ -189,11 +189,11 @@ export default function Home() {
             <div className="bg-secondary rounded-lg overflow-hidden shadow-[12px_12px_0px_0px_#1F2226]">
               <div className="p-2 sm:p-3 md:p-4 ">
                 <Image
-                  src="/placeholder.png"
+                  src="/illustration.png"
                   alt="Video Placeholder"
                   width={400}
                   height={300}
-                  className="w-full h-auto rounded-lg"
+                  className="w-300px h-auto rounded-lg mx-auto"
                 />
               </div>
             </div>
