@@ -58,7 +58,6 @@ export default function Home() {
           Jetpack Compose Bootcamp
         </p>
         <button
-          onClick={handleScroll}
           className="
         relative text-xl md:text-2xl mt-8 py-1 md:py-2 px-4 md:px-6 font-semibold border-none cursor-pointer
         inline-flex items-center gap-2 transition-all duration-250
@@ -70,7 +69,9 @@ export default function Home() {
         active:shadow-[inset_0_1px_0_0_#65e4a1,0_1px_0_0_#38d17e,0_1px_0_0_#35c979,0_1px_0_0_#31bd72,0_1px_0_0_#2eb46d,0_1px_0_0_#2bab68,0_2px_0_0_#28a263,0_2px_4px_0_rgba(40,162,99,0.5)]
       "
         >
-          <span>Öğrenmeye Başla</span>
+          <a href="https://kommunity.com/devmultigroup" target="_blank">
+            <span>Hemen Başvur</span>
+          </a>
         </button>
 
         {/* Scroll Animation */}
@@ -83,7 +84,10 @@ export default function Home() {
             Öğrenmeye Başla
           </p> */}
           <div className="animate-bounce bg-primary rounded-full p-2">
-            <ChevronDownIcon className="h-5 w-5 sm:h-8 sm:w-8 text-secondary" />
+            <ChevronDownIcon
+              onClick={handleScroll}
+              className="hover:cursor-pointer h-5 w-5 sm:h-8 sm:w-8 text-secondary"
+            />
           </div>
         </div>
       </section>
@@ -156,18 +160,18 @@ export default function Home() {
 
           {/* Jetpack Compose Section */}
           <div className="max-w-7xl mx-auto py-8 sm:py-12 md:py-12 px-4 sm:px-6 md:px-8">
-            <h2 className="text-center text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-6 sm:mb-8">
+            <h2 className="text-center text-3xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-6 sm:mb-8">
               <span className="text-accent text-stroke">Jetpack Compose</span>{" "}
               <span className="text-black dark:text-white">ile modern</span>{" "}
-              <span className="text-secondary text-stroke">Android</span>{" "}
+              <span className="text-secondary text-stroke underline underline-offset-3 md:no-underline decoration-secondary">Android</span>{" "}
               <br className="sm:hidden" />
-              <span className="text-secondary text-stroke">
+              <span className="text-secondary text-stroke underline underline-offset-3 md:no-underline decoration-secondary">
                 geliştirmeye
               </span>{" "}
               <span className="text-black dark:text-white">ilk adımı at!</span>
             </h2>
 
-            <p className="text-center max-w-3xl mx-auto text-sm sm:text-base md:text-lg my-6 sm:my-8 md:my-12 px-4">
+            <p className="text-center max-w-3xl mx-auto text-lg sm:text-base md:text-lg my-6 sm:my-8 md:my-12 px-4">
               Jetpack Compose ile Android geliştirici olmak istiyorsan, en
               güncel müfredat ve yeniliklerle güçlü bir başlangıç yap!
             </p>
@@ -231,27 +235,27 @@ export default function Home() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-12 lg:gap-36">
               {/* Google Text */}
               <div className="flex flex-col justify-center">
-                <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold mb-6 sm:mb-8 flex flex-wrap items-center justify-center text-center md:justify-start md:text-left">
+                <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-6 sm:mb-8 flex flex-wrap items-center justify-center text-center md:justify-start md:text-left">
                   {/* Google logosu */}
                   <img
                     src="/google-logo.png"
                     alt="Google Logo"
-                    className="w-auto h-8 sm:h-10  md:h-12  lg:h-14 mr-2"
+                    className="w-auto h-10 sm:h-12  md:h-14  lg:h-16 mr-2"
                   />
                   <span className="text-black dark:text-white">
                     'ın Hazırladığı&nbsp;
                   </span>
                   <span className="leading-relaxed">
-                    <span className="text-stroke text-secondary">
-                      En Güncel
-                    </span>{" "}
-                    İçeriği Sizin İçin Düzenledik
+                    En Güncel İçeriği{" "}
+                    <span className="text-secondary text-stroke">
+                      Sizin İçin Düzenledik
+                    </span>
                   </span>
                 </h2>
               </div>
 
               {/* Topics Grid */}
-              <div className="grid grid-cols-2 gap-3 sm:gap-4">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-3 sm:gap-4">
                 {[
                   "Kotlin ile Modern Programlama Temelleri",
                   "Jetpack Compose ile Responsive UI Tasarımı",
@@ -273,7 +277,7 @@ export default function Home() {
                       alt="Android Icon"
                       className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 flex-shrink-0 transition-transform duration-300 group-hover:rotate-90"
                     />
-                    <span className="text-xs sm:text-sm md:text-base font-medium transition-all duration-300 group-hover:translate-x-2 relative">
+                    <span className="text-sm sm:text-lg md:text-base font-medium transition-all duration-300 group-hover:translate-x-2 relative">
                       {topic}
                       <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-secondary transition-all duration-300 group-hover:w-5/6"></span>
                     </span>
@@ -288,9 +292,9 @@ export default function Home() {
         <section className="max-w-7xl px-4 sm:px-6 md:px-8 mx-auto py-12 sm:py-18 md:py-48">
           <h2 className="text-center text-2xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold mb-6 sm:mb-8 md:mb-12">
             <span className="text-black dark:text-white">Kısaca </span>
-            <span className="text-[#DD3E34] text-stroke">3</span>
+            <span className="text-accent text-stroke">3</span>
             <span className="text-black dark:text-white"> Madde ile </span>
-            <span className="text-secondary text-stroke">
+            <span className="text-accent text-stroke">
               Neden Bu Bootcamp'e Katılmalısın?
             </span>
           </h2>
@@ -303,7 +307,7 @@ export default function Home() {
                 className="relative group mx-auto w-full max-w-md md:max-w-none"
               >
                 {/* Using box-shadow instead of translated element */}
-                <div className="bg-accent rounded-lg p-4 sm:p-5 md:p-6 border-2 sm:border-3 md:border-4 border-primary relative min-h-[150px] sm:min-h-[180px] md:min-h-[200px] flex flex-col justify-between shadow-[8px_8px_0px_0px_#41DF99]">
+                <div className="bg-primary rounded-lg p-4 sm:p-5 md:p-6 border-2 sm:border-3 md:border-4 border-primary relative min-h-[150px] sm:min-h-[180px] md:min-h-[200px] flex flex-col justify-between shadow-[8px_8px_0px_0px_#41DF99]">
                   <h3 className="text-base sm:text-lg md:text-xl font-bold text-white mb-2">
                     {benefit.title}
                   </h3>

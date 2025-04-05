@@ -86,16 +86,16 @@ const FloatingActionButton = () => {
         tabIndex={0}
         aria-expanded={isActive}
       >
-        <span
-          className={`select-none absolute inset-0 flex items-center justify-center text-[#1f2226] text-xl sm:text-2xl font-bold transition-transform duration-300 ${
-            isActive ? "rotate-45" : ""
+        <img
+          src="/logo-small-android-2.png"
+          alt="Toggle Button Icon"
+          className={`select-none absolute inset-0 w-2/3 h-2/3 object-contain transition-transform duration-300 mx-auto my-auto ${
+            isActive ? "rotate-180" : ""
           }`}
-        >
-          +
-        </span>
+        />
 
         <ul
-          className={`absolute bottom-14 sm:bottom-16 right-0 bg-[#1f2226] rounded-xl shadow-2xl p-3 sm:p-4 space-y-2 sm:space-y-3 min-w-[180px] sm:min-w-[200px] transition-all duration-300 ${
+          className={`absolute bottom-14 sm:bottom-16 right-0 bg-[#1f2226] rounded-xl shadow-2xl p-3 sm:p-4 space-y-2 sm:space-y-3 min-w-[180px] sm:min-w-[220px] transition-all duration-300 ${
             isActive
               ? "opacity-100 visible translate-y-0"
               : "opacity-0 invisible translate-y-2"
