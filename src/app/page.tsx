@@ -3,7 +3,7 @@
 import Image from "next/image";
 import GoogleLogoInfiniteScroll from "../components/GoogleInfiniteScroll";
 import { useEffect, useState } from "react";
-import { ChevronsDownIcon } from "lucide-react";
+import { ChevronDownIcon } from "lucide-react";
 
 const bootcampBenefits = [
   {
@@ -83,7 +83,7 @@ export default function Home() {
             Öğrenmeye Başla
           </p> */}
           <div className="animate-bounce bg-primary rounded-full p-2">
-            <ChevronsDownIcon className="h-10 w-10 sm:h-15 sm:w-15 text-secondary" />
+            <ChevronDownIcon className="h-5 w-5 sm:h-8 sm:w-8 text-secondary" />
           </div>
         </div>
       </section>
