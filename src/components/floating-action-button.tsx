@@ -6,11 +6,12 @@ import {
   YoutubeLogo,
   UsersThree,
 } from "@phosphor-icons/react";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 
-const FloatingActionButton = ({alwaysShow}: {alwaysShow: boolean}) => {
+const FloatingActionButton = ({ alwaysShow }: { alwaysShow: boolean }) => {
   const [isActive, setIsActive] = useState(false);
   const [showButton, setShowButton] = useState(alwaysShow);
+  const containerRef = useRef<HTMLDivElement>(null);
 
   const socialItems = [
     {
@@ -45,9 +46,12 @@ const FloatingActionButton = ({alwaysShow}: {alwaysShow: boolean}) => {
     },
   ];
 
+  // Handle scroll visibility
   useEffect(() => {
     const handleScroll = () => {
-      const shouldShow = alwaysShow ? true : window.scrollY > window.innerHeight * 0.2;
+      const shouldShow = alwaysShow
+        ? true
+        : window.scrollY > window.innerHeight * 0.2;
       setShowButton(shouldShow);
     };
 
@@ -66,14 +70,29 @@ const FloatingActionButton = ({alwaysShow}: {alwaysShow: boolean}) => {
     };
 
     const scrollHandler = debouncedScroll();
-
     window.addEventListener("scroll", scrollHandler);
     return () => window.removeEventListener("scroll", scrollHandler);
+  }, [alwaysShow]);
+
+  // Close dropdown if clicking outside of the container
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (
+        containerRef.current &&
+        !containerRef.current.contains(event.target as Node)
+      ) {
+        setIsActive(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
   return (
     <div
-      className={`fixed bottom-6 right-6 z-50 transition-all duration-300 ${
+      ref={containerRef}
+      className={`fixed bottom-6 right-6 z-50 transition-all duration-300 font-montserrat-mid ${
         showButton ? "opacity-100 translate-y-0" : "opacity-0 translate-y-2"
       }`}
     >
@@ -107,7 +126,7 @@ const FloatingActionButton = ({alwaysShow}: {alwaysShow: boolean}) => {
               <a key={index} href={item.link}>
                 <li className="flex items-center py-1.5 px-2 sm:py-2 sm:px-3 hover:bg-[#ffffff15] rounded-lg transition-all duration-200 group">
                   <IconComponent
-                    color="white" // Makes the icon white
+                    color="white"
                     className="w-4 h-4 sm:w-5 sm:h-5 mr-2 sm:mr-3 transition-transform duration-200 group-hover:scale-110"
                   />
                   <span className="text-[#ffffffdd] text-xs sm:text-sm group-hover:text-[#ff5757] transition-colors duration-200">
