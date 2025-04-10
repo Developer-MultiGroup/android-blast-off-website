@@ -257,32 +257,56 @@ export default function Home() {
               </div>
 
               {/* Topics Grid */}
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-3 sm:gap-4">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {[
-                  "Kotlin ile Modern Programlama Temelleri",
-                  "Jetpack Compose ile Responsive UI Tasarımı",
-                  "ViewModel & LiveData ile State Yönetimi",
-                  "Compose Navigation ile Gezinme Sistemleri",
-                  "Material Design 3 Uygulamaları",
-                  "Room Database ile Lokal Veri Yönetimi",
-                  "Retrofit & Coroutines ile Network İşlemleri",
-                  "Clean Architecture & MVVM Pattern",
-                  "Unit Test & UI Test Otomasyonu",
-                  "Performans Optimizasyonu ve Debugging Teknikleri",
-                ].map((topic, index) => (
+                  {
+                    number: "Unit 1",
+                    title: "Blast Off",
+                    description:
+                      "Begin your Android development journey with the fundamentals of Kotlin and app architecture.",
+                  },
+                  {
+                    number: "Unit 2",
+                    title: "Android Galaxy",
+                    description:
+                      "Explore UI development with Jetpack Compose and Material Design principles.",
+                  },
+                  {
+                    number: "Unit 3",
+                    title: "Solid Ground",
+                    description:
+                      "Master data management with Room Database and network operations using Retrofit.",
+                  },
+                  {
+                    number: "Unit 4",
+                    title: "Infinity & Beyond",
+                    description:
+                      "Advanced topics including architecture patterns, testing, and performance optimization.",
+                  },
+                ].map((unit, index) => (
                   <div
                     key={index}
-                    className="flex items-center space-x-2 group cursor-pointer transition-all duration-300 ease-in-out"
+                    className="bg-background border border-border rounded-xl p-6 shadow-sm hover:shadow-md transition-all duration-300 group cursor-pointer"
                   >
-                    <img
-                      src="/jetpack-compose.svg"
-                      alt="Android Icon"
-                      className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 flex-shrink-0 transition-transform duration-300 group-hover:rotate-90"
-                    />
-                    <span className="text-sm sm:text-lg md:text-base font-medium transition-all duration-300 group-hover:translate-x-2 relative">
-                      {topic}
-                      <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-secondary transition-all duration-300 group-hover:w-5/6"></span>
-                    </span>
+                    <div className="flex items-start space-x-4">
+                      <div className="pt-0 mt-0 flex-shrink-0">
+                        <img
+                          src="/jetpack-compose.svg"
+                          alt="Android Icon"
+                          className="w-6 h-6 md:w-6 md:h-6 transition-transform duration-300 group-hover:rotate-90"
+                        />
+                      </div>
+                      <div className="space-y-2 font-montserrat-mid pt-0">
+                        <div className="space-y-1">
+                          <div className="text-sm text-muted-foreground">{unit.number}</div>
+                          <h3 className="text-xl font-semibold transition-all duration-300 group-hover:translate-x-2 relative">
+                            {unit.title}
+                            <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-secondary transition-all duration-300 group-hover:w-full"></span>
+                          </h3>
+                        </div>
+                        <p className="text-sm text-muted-foreground">{unit.description}</p>
+                      </div>
+                    </div>
                   </div>
                 ))}
               </div>

@@ -107,7 +107,7 @@ export function generateCalendarFile(event: Event): void {
 
     const fileName =
       event.sessions.length > 1
-        ? "dmg-genai-bootcamp-schedule.ics"
+        ? "android-blast-off-bootcamp-schedule.ics"
         : `${event.sessions[0].topic
             .replace(/[^a-z0-9]/gi, "_")
             .toLowerCase()}.ics`;
