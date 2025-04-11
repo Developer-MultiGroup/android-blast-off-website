@@ -48,18 +48,25 @@ export default function Footer() {
             Kaynaklar
           </Link> */}
           <Link
+            aria-label="Kaynaklar sayfası"
+            href="/kaynaklar"
+            className="hover:text-secondary transition-colors ease-in-out duration-300"
+          >
+            Kaynaklar
+          </Link>
+          <Link
             aria-label="Konuşmacılar sayfası"
-            href="/#konuşmacılar"
+            href="/konusmacilar"
             className="hover:text-secondary transition-colors ease-in-out duration-300"
           >
             Konuşmacılar
           </Link>
           <Link
-            aria-label="yayınlar"
-            href="/#yayınlar"
+            aria-label="takvim"
+            href="/takvim"
             className="hover:text-secondary transition-colors ease-in-out duration-300"
           >
-            Yayınlar
+            Takvim
           </Link>
         </nav>
         <div className="flex gap-4 mt-4 lg:mt-0">

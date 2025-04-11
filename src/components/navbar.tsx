@@ -78,7 +78,7 @@ const Navbar = () => {
               className="relative h-11 px-6 text-zinc-900 group transition-all duration-300 ease-in-out"
             >
               <a
-                href="https://kommunity.com/devmultigroup/events/generativeai-fundamentals-with-gemini-64a8a503"
+                href="https://kommunity.com/devmultigroup/events/android-blast-off-jetpack-compose-bootcamp-18857d79"
                 target="_blank"
               >
                 <div className="absolute inset-0 bg-accent transition-transform duration-300 ease-in-out rounded-md" />
@@ -139,7 +139,7 @@ const Navbar = () => {
               className="mt-6 rounded-lg text-lg text-black border-white px-8 py-3"
             >
               <a
-                href="https://kommunity.com/devmultigroup/events/generativeai-fundamentals-with-gemini-64a8a503"
+                href="https://kommunity.com/devmultigroup/events/android-blast-off-jetpack-compose-bootcamp-18857d79"
                 target="_blank"
               >
                 Başvur

@@ -25,6 +25,11 @@ const events: Event[] = [
         fullName: "Melissa Çoralı",
         title: "Android Developer & Scrum Master",
         company: "Akbank"
+      },
+      {
+        fullName: "Kasım Adalan",
+        title: "Sr Android - IOS Developer",
+        company: "Sabancı University"
       }
     ],
     sessions: [

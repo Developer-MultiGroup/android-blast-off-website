@@ -257,7 +257,7 @@ export default function Home() {
               </div>
 
               {/* Topics Grid */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="flex flex-col gap-y-4">
                 {[
                   {
                     number: "Unit 1",
@@ -284,27 +284,27 @@ export default function Home() {
                       "Advanced topics including architecture patterns, testing, and performance optimization.",
                   },
                 ].map((unit, index) => (
-                  <div
-                    key={index}
-                    className="bg-background border border-border rounded-xl p-6 shadow-sm hover:shadow-md transition-all duration-300 group cursor-pointer"
-                  >
-                    <div className="flex items-start space-x-4">
+                  <div key={index} className="bg-background border border-border hover:border-secondary rounded-xl p-6 shadow-sm hover:shadow-md group transition-all duration-300 cursor-pointer">
+                    <div className="flex items-center space-x-4">
                       <div className="pt-0 mt-0 flex-shrink-0">
                         <img
                           src="/jetpack-compose.svg"
                           alt="Android Icon"
-                          className="w-6 h-6 md:w-6 md:h-6 transition-transform duration-300 group-hover:rotate-90"
+                          className="w-6 h-6 md:w-8 md:h-8 transition-transform duration-300 group-hover:rotate-90"
                         />
                       </div>
                       <div className="space-y-2 font-montserrat-mid pt-0">
-                        <div className="space-y-1">
-                          <div className="text-sm text-muted-foreground">{unit.number}</div>
-                          <h3 className="text-xl font-semibold transition-all duration-300 group-hover:translate-x-2 relative">
+                        <div className="flex items-center justify-between">
+                          <h3 className="text-xl font-semibold transition-all duration-300 relative">
                             {unit.title}
-                            <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-secondary transition-all duration-300 group-hover:w-full"></span>
                           </h3>
+                          <div className="text-sm  ml-2 group-hover:text-accent transition-all duration-300">
+                            {unit.number}
+                          </div>
                         </div>
-                        <p className="text-sm text-muted-foreground">{unit.description}</p>
+                        <p className="text-sm text-muted-foreground">
+                          {unit.description}
+                        </p>
                       </div>
                     </div>
                   </div>

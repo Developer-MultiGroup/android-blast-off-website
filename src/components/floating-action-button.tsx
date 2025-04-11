@@ -114,7 +114,7 @@ const FloatingActionButton = ({ alwaysShow }: { alwaysShow: boolean }) => {
         />
 
         <ul
-          className={`absolute bottom-14 sm:bottom-16 right-0 bg-[#1f2226] rounded-xl shadow-2xl p-3 sm:p-4 space-y-2 sm:space-y-3 min-w-[180px] sm:min-w-[220px] transition-all duration-300 ${
+          className={`absolute bottom-14 sm:bottom-16 right-0 bg-[#1f2226] border-2 border-secondary rounded-xl shadow-2xl p-3 sm:p-4 space-y-2 sm:space-y-3 min-w-[180px] sm:min-w-[220px] transition-all duration-300 ${
             isActive
               ? "opacity-100 visible translate-y-0"
               : "opacity-0 invisible translate-y-2"
