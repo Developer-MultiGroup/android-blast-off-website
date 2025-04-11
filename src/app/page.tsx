@@ -237,7 +237,7 @@ export default function Home() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-12 lg:gap-36">
               {/* Google Text */}
               <div className="flex flex-col justify-center">
-                <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-6 sm:mb-8 flex flex-wrap items-center justify-center text-center md:justify-start md:text-left">
+                <h2 style={{fontFamily: "Open Sans", fontWeight: "800"}} className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-6 sm:mb-8 flex flex-wrap items-center justify-center text-center md:justify-start md:text-left">
                   {/* Google logosu */}
                   <img
                     src="/google-logo.png"
@@ -245,13 +245,12 @@ export default function Home() {
                     className="w-auto h-10 sm:h-12  md:h-14  lg:h-16 mr-2"
                   />
                   <span className="text-black dark:text-white">
-                    'ın Hazırladığı&nbsp;
+                    'ın Hazırladığı <span className="text-secondary">En</span>
+                    &nbsp;
                   </span>
                   <span className="leading-relaxed">
-                    En Güncel İçeriği{" "}
-                    <span className="text-secondary text-stroke">
-                      Sizin İçin Düzenledik
-                    </span>
+                    <span className="text-secondary">Güncel</span> İçeriği Sizin
+                    İçin Düzenledik
                   </span>
                 </h2>
               </div>
@@ -284,7 +283,10 @@ export default function Home() {
                       "Advanced topics including architecture patterns, testing, and performance optimization.",
                   },
                 ].map((unit, index) => (
-                  <div key={index} className="bg-background border border-border hover:border-secondary rounded-xl p-6 shadow-sm hover:shadow-md group transition-all duration-300 cursor-pointer">
+                  <div
+                    key={index}
+                    className="bg-background border border-border hover:border-secondary rounded-xl p-6 shadow-sm hover:shadow-md group transition-all duration-300 cursor-pointer"
+                  >
                     <div className="flex items-center space-x-4">
                       <div className="pt-0 mt-0 flex-shrink-0">
                         <img

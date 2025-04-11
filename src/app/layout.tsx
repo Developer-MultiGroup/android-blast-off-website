@@ -5,6 +5,7 @@ import Navbar from "../components/navbar";
 import Script from "next/script";
 import Footer from "../components/footer";
 import { ResourceProvider } from "@/context/ResourceContext";
+import { Open_Sans } from "next/font/google";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -14,6 +15,11 @@ const geistSans = Geist({
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+});
+
+const openSans = Open_Sans({
+  subsets: ["latin"],
+  weight: ["400", "700", "800"], // specify weights you need
 });
 
 export const metadata: Metadata = {
