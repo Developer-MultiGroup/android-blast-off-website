@@ -237,20 +237,28 @@ export default function Home() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-12 lg:gap-36">
               {/* Google Text */}
               <div className="flex flex-col justify-center">
-                <h2 style={{fontFamily: "Open Sans", fontWeight: "800"}} className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-6 sm:mb-8 flex flex-wrap items-center justify-center text-center md:justify-start md:text-left">
+                <h2
+                  style={{ fontFamily: "Open Sans", fontWeight: "800" }}
+                  className="text-xl sm:text-2xl md:text-3xl lg:text-5xl font-bold mb-6 sm:mb-8 flex flex-wrap items-center justify-center text-center md:justify-start md:text-left"
+                >
                   {/* Google logosu */}
                   <img
                     src="/google-logo.png"
                     alt="Google Logo"
-                    className="w-auto h-10 sm:h-12  md:h-14  lg:h-16 mr-2"
+                    className="w-auto h-10 sm:h-12  md:h-16  lg:h-18 mr-2"
                   />
                   <span className="text-black dark:text-white">
-                    'ın Hazırladığı <span className="text-secondary">En</span>
-                    &nbsp;
+                    Tarafından &nbsp;
                   </span>
-                  <span className="leading-relaxed">
-                    <span className="text-secondary">Güncel</span> İçeriği Sizin
-                    İçin Düzenledik
+                  <span className="leading-snug">
+                    Hazırlanan En{" "}
+                    <span className="text-secondary"> Güncel İçerikleri </span>{" "}
+                    Sizler İçin Derledik!
+                  </span>
+                  <span className="text-sm sm:text-md md:text-lg lg:text-xl font-light pt-6">
+                    Bir dolu bilgi yığının içinde sizin için derlenen ve
+                    toplanan en güncel düzenlenmiş ve kullanışlı eğitim
+                    içerişini sunuyoruz. Eminiz google da bunu isterdi!
                   </span>
                 </h2>
               </div>
