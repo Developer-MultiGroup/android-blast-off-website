@@ -296,7 +296,7 @@ export default function Home() {
                 ].map((unit, index) => (
                   <div
                     key={index}
-                    className="bg-background border border-border hover:border-secondary rounded-xl p-6 shadow-sm hover:shadow-md group transition-all duration-300 cursor-pointer"
+                    className="bg-background border-2 hover:border-secondary rounded-xl p-6 shadow-sm hover:shadow-md group transition-all duration-300 cursor-pointer"
                   >
                     <div className="flex items-center space-x-4">
                       <div className="pt-0 mt-0 flex-shrink-0">
