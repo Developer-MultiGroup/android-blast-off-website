@@ -68,6 +68,13 @@ export default function Footer() {
           >
             Takvim
           </Link>
+          <Link
+            aria-label="takvim"
+            href="https://kommunity.com/devmultigroup"
+            className="hover:text-secondary transition-colors ease-in-out duration-300"
+          >
+            Topluluk
+          </Link>
         </nav>
         <div className="flex gap-4 mt-4 lg:mt-0">
           <Link

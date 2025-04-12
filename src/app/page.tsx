@@ -70,7 +70,10 @@ export default function Home() {
         active:shadow-[inset_0_1px_0_0_#65e4a1,0_1px_0_0_#38d17e,0_1px_0_0_#35c979,0_1px_0_0_#31bd72,0_1px_0_0_#2eb46d,0_1px_0_0_#2bab68,0_2px_0_0_#28a263,0_2px_4px_0_rgba(40,162,99,0.5)]
       "
         >
-          <a href="https://kommunity.com/devmultigroup" target="_blank">
+          <a
+            href="https://kommunity.com/devmultigroup/events/android-blast-off-jetpack-compose-bootcamp-18857d79"
+            target="_blank"
+          >
             <span>Hemen Başvur</span>
           </a>
         </button>
