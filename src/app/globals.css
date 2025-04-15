@@ -71,8 +71,8 @@ body {
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
   --color-primary: #1f2226;
-  --color-secondary: #41df9a;
-  --color-accent: #ff5757;
+  --color-secondary: #41df9a; 
+  --color-accent: #3E7DDC; /* old: # */
   --color-background: #fff;
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);

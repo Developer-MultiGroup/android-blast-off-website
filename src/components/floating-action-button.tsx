@@ -129,7 +129,7 @@ const FloatingActionButton = ({ alwaysShow }: { alwaysShow: boolean }) => {
                     color="white"
                     className="w-4 h-4 sm:w-5 sm:h-5 mr-2 sm:mr-3 transition-transform duration-200 group-hover:scale-110"
                   />
-                  <span className="text-[#ffffffdd] text-xs sm:text-sm group-hover:text-[#ff5757] transition-colors duration-200">
+                  <span className="text-[#ffffffdd] text-xs sm:text-sm group-hover:text-accent transition-colors duration-200">
                     {item.label}
                   </span>
                 </li>

@@ -165,22 +165,41 @@ export default function Home() {
           {/* Jetpack Compose Section */}
           <div className="max-w-7xl mx-auto py-8 sm:py-12 md:py-12 px-4 sm:px-6 md:px-8">
             <h2 className="text-center text-3xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-6 sm:mb-8">
-              <span className="text-accent text-stroke">Jetpack Compose</span>{" "}
+            Jetpack Compose{" "}
               <span className="text-black dark:text-white">ile modern</span>{" "}
-              <span className="text-secondary text-stroke underline underline-offset-3 md:no-underline decoration-secondary">
+              <span className="text-accent  underline underline-offset-3 md:no-underline decoration-accent">
                 Android
               </span>{" "}
               <br className="sm:hidden" />
-              <span className="text-secondary text-stroke underline underline-offset-3 md:no-underline decoration-secondary">
+              <span className="text-accent  underline underline-offset-3 md:no-underline decoration-accent">
                 geliştirmeye
               </span>{" "}
               <span className="text-black dark:text-white">ilk adımı at!</span>
             </h2>
 
-            <p className="text-center max-w-3xl mx-auto text-lg sm:text-base md:text-lg my-6 sm:my-8 md:my-12 px-4">
+            <p className="text-center max-w-3xl mx-auto text-xl sm:text-base md:text-xl my-6 sm:my-8 md:my-12 px-4 font-montserrat-mid font-extrabold">
               Jetpack Compose ile Android geliştirici olmak istiyorsan, en
               güncel müfredat ve yeniliklerle güçlü bir başlangıç yap!
             </p>
+          </div>
+
+          <div className="grid grid-cols-1 gap-y-12 md:grid-cols-4 gap-4 mb-12 text-center max-w-5xl mx-auto">
+            <div className="flex flex-col items-center">
+              <h3 className="text-xl mb-2 font-montserrat-mid font-extrabold">Katılım Başvurusu</h3>
+              <p className="text-5xl font-bold">500</p>
+            </div>
+            <div className="flex flex-col items-center">
+              <h3 className="text-xl mb-2 font-montserrat-mid font-extrabold">Özel Konuk</h3>
+              <p className="text-5xl font-bold">100<span className="text-accent">+</span></p>
+            </div>
+            <div className="flex flex-col items-center">
+              <h3 className="text-xl mb-2 font-montserrat-mid font-extrabold">Topluluk Destekçisi</h3>
+              <p className="text-5xl font-bold">150<span className="text-accent">+</span></p>
+            </div>
+            <div className="flex flex-col items-center">
+              <h3 className="text-xl mb-2 font-montserrat-mid font-extrabold">Konuşmacı Sayısı</h3>
+              <p className="text-5xl font-bold">30</p>
+            </div>
           </div>
         </section>
 
@@ -331,9 +350,9 @@ export default function Home() {
         <section className="max-w-7xl px-4 sm:px-6 md:px-8 mx-auto py-12 sm:py-18 md:py-48">
           <h2 className="text-center text-2xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold mb-6 sm:mb-8 md:mb-12">
             <span className="text-black dark:text-white">Kısaca </span>
-            <span className="text-accent text-stroke">3</span>
+            <span className="text-accent ">3</span>
             <span className="text-black dark:text-white"> Madde ile </span>
-            <span className="text-accent text-stroke">
+            <span className="text-accent ">
               Neden Bu Bootcamp'e Katılmalısın?
             </span>
           </h2>
