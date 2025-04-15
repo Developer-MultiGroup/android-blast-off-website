@@ -165,7 +165,7 @@ export default function Home() {
           {/* Jetpack Compose Section */}
           <div className="max-w-7xl mx-auto pt-16 pb-8 sm:py-16 md:pt-24 md:pb-8 px-4 sm:px-6 md:px-8">
             <h2 className="text-center text-3xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-6 sm:mb-8">
-            Jetpack Compose{" "}
+              Jetpack Compose{" "}
               <span className="text-black dark:text-white">ile modern</span>{" "}
               <span className="text-accent  underline underline-offset-3 md:no-underline decoration-accent">
                 Android
@@ -183,22 +183,47 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 gap-y-12 md:grid-cols-4 gap-4 pb-24 text-center max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 gap-y-12 md:grid-cols-4 gap-4 pb-24 text-center max-w-5xl mx-auto relative">
             <div className="flex flex-col items-center">
-              <h3 className="text-xl mb-2 font-montserrat-mid font-extrabold">Katılım Başvurusu</h3>
-              <p className="text-5xl font-bold">500<span className="text-accent">+</span></p>
+              <h3 className="text-xl mb-2 font-montserrat-mid font-extrabold">
+                Katılım Başvurusu
+              </h3>
+              <p className="text-5xl font-montserrat-semi font-bold">
+                500<span className="text-accent">+</span>
+              </p>
             </div>
+
+            <div className="hidden md:block absolute h-1/2 w-[2px] bg-black left-1/4 top-0"></div>
+
             <div className="flex flex-col items-center">
-              <h3 className="text-xl mb-2 font-montserrat-mid font-extrabold">Özel Konuk</h3>
-              <p className="text-5xl font-bold">100<span className="text-accent">+</span></p>
+              <h3 className="text-xl mb-2 font-montserrat-mid font-extrabold">
+                Özel Konuk
+              </h3>
+              <p className="text-5xl font-montserrat-semi font-bold">
+                100<span className="text-accent">+</span>
+              </p>
             </div>
+
+            <div className="hidden md:block absolute h-1/2 w-[2px] bg-black left-1/2 top-0"></div>
+
             <div className="flex flex-col items-center">
-              <h3 className="text-xl mb-2 font-montserrat-mid font-extrabold">Topluluk Destekçisi</h3>
-              <p className="text-5xl font-bold">150<span className="text-accent">+</span></p>
+              <h3 className="text-xl mb-2 font-montserrat-mid font-extrabold">
+                Topluluk Destekçisi
+              </h3>
+              <p className="text-5xl font-montserrat-semi font-bold">
+                150<span className="text-accent">+</span>
+              </p>
             </div>
+
+            <div className="hidden md:block absolute h-1/2 w-[2px] bg-black left-3/4 top-0"></div>
+
             <div className="flex flex-col items-center">
-              <h3 className="text-xl mb-2 font-montserrat-mid font-extrabold">Konuşmacı Sayısı</h3>
-              <p className="text-5xl font-bold">30<span className="text-accent">+</span></p>
+              <h3 className="text-xl mb-2 font-montserrat-mid font-extrabold">
+                Konuşmacı Sayısı
+              </h3>
+              <p className="text-5xl font-montserrat-semi font-bold">
+                30<span className="text-accent">+</span>
+              </p>
             </div>
           </div>
         </section>
@@ -224,7 +249,8 @@ export default function Home() {
           {/* Text Content */}
           <div className="flex flex-col justify-center px-4 sm:px-0">
             <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4">
-              Canlı Kodlama ile <span className="text-accent" >%80 Daha Kalıcı</span> Öğrenin!
+              Canlı Kodlama ile{" "}
+              <span className="text-accent">%80 Daha Kalıcı</span> Öğrenin!
             </h3>
             <p className="text-gray-600 dark:text-gray-300 my-4 sm:my-6 text-sm sm:text-base text-justify">
               Canlı ve online eğitimlerle yalnızca bilgi edinmekle kalmayın;
