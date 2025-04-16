@@ -17,9 +17,34 @@ const events: Event[] = [
         company: "Instacart"
       },
       {
+        fullName: "Kaan Enes Kapıcı",
+        title: "Senior Mobile Application Engineer Specialist",
+        company: "turk-telekom"
+      },
+      {
+        fullName: "Mehmet Niyazi Atlıoğlu",
+        title: "Android Developer",
+        company: "softtech"
+      },
+      {
         fullName: "Necati Sözer",
         title: "Android Software Engineer",
         company: "Lyrebird Studio"
+      },
+      {
+        fullName: "Emirhan Emmez",
+        title: "Manager Android Engineer",
+        company: "d360-bank"
+      },
+      {
+        fullName: "Onur Özdemir",
+        title: "Düzenlenecek",
+        company: "Akbank"
+      },
+      {
+        fullName: "Kasım Adalan",
+        title: "Sr Android - IOS Developer",
+        company: "Sabancı University"
       },
       {
         fullName: "Melissa Çoralı",
@@ -27,10 +52,10 @@ const events: Event[] = [
         company: "Akbank"
       },
       {
-        fullName: "Kasım Adalan",
-        title: "Sr Android - IOS Developer",
-        company: "Sabancı University"
-      }
+        fullName: "Ömer Karaca",
+        title: "Co-Founder",
+        company: "wite"
+      },
     ],
     sessions: [
       {
@@ -49,6 +74,20 @@ const events: Event[] = [
         speakerName: "Murat Yener",
       },
       {
+        topic: "Jetpack Compose'da State Yönetimi",
+        date: "2025-05-21",
+        startTime: "20:30",
+        endTime: "22:00",
+        speakerName: "Kaan Enes Kapıcı",
+      },
+      {
+        topic: "Android Dünyası için Yapay Zeka Gelişmeleri",
+        date: "2025-05-26",
+        startTime: "20:30",
+        endTime: "22:00",
+        speakerName: "Mehmet Niyazi Atlıoğlu",
+      },
+      {
         topic: "MVVM Mimarisi Nedir? Android'de MVVM Yapısı",
         date: "2025-05-28",
         startTime: "20:30",
@@ -63,11 +102,39 @@ const events: Event[] = [
         speakerName: "Necati Sözer",
       },
       {
+        topic: "Retrofit ile API Entegrasyonu",
+        date: "2025-06-04",
+        startTime: "20:30",
+        endTime: "22:00",
+        speakerName: "Emirhan Emmez",
+      },
+      {
+        topic: "Android Views Nedir? Compose Öncesi Geleneksel UI Yapısı",
+        date: "2025-06-14",
+        startTime: "20:30",
+        endTime: "22:00",
+        speakerName: "Onur Özdemir",
+      },
+      {
+        topic: "",
+        date: "2025-06-16",
+        startTime: "20:30",
+        endTime: "22:00",
+        speakerName: "Kasım Adalan",
+      },
+      {
         topic: "Herkes İçin Erişilebilir Tasarım ve İpuçları",
         date: "2025-06-18",
         startTime: "20:30",
         endTime: "22:00",
         speakerName: "Melissa Çoralı",
+      },
+      {
+        topic: "Compose Preview Screenshot Testing",
+        date: "2025-06-21",
+        startTime: "20:30",
+        endTime: "22:00",
+        speakerName: "Ömer Karaca",
       },
     ],
     sponsors: [
