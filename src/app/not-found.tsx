@@ -4,12 +4,14 @@ import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { useRouter } from "next/navigation";
 // import CountdownTimer from "@/components/countdown-timer";
-// import { getLatestEvent, getClosestSession } from "@/lib/event-utils";
+import { getLatestEvent, getClosestSession, getClosestUpcomingSession } from "@/lib/event-utils";
 import { Sparkles, Ghost, Home, Coffee } from "lucide-react";
+import CountdownTimer from "@/components/countdown-timer";
+import events from "@/data/events";
 
 export default function NotFound() {
   const router = useRouter();
-  // const latestEventDetails = getLatestEvent();
+  const latestEventDetails = getLatestEvent();
   const [clickCount, setClickCount] = useState(0);
   const [showEasterEgg, setShowEasterEgg] = useState(false);
   const [stars, setStars] = useState<
@@ -41,8 +43,8 @@ export default function NotFound() {
     }
   };
 
-  // const closestSessionDate = getClosestSession(latestEventDetails);
-  // console.log(closestSessionDate);
+  const closestSessionDate = getClosestUpcomingSession(events);
+  console.log(closestSessionDate);
   
 
   return (
@@ -102,17 +104,17 @@ export default function NotFound() {
         Öyle bir yayın olsa da izlesek!
       </p>
 
-      <div className="mt-6 md:mt-8 text-white bg-black/20 p-4 md:p-6 rounded-xl backdrop-blur-sm mx-4 w-[90%] max-w-md">
+      {closestSessionDate && <div className="font-montserrat-mid mt-6 md:mt-8 text-white bg-black/20 p-4 md:p-6 rounded-xl backdrop-blur-sm mx-4 w-[90%] max-w-md">
         <p className="text-center mb-2 text-accent font-semibold text-sm md:text-base">
           Bir sonraki yayına kalan süre:
         </p>
 
-        {/* <CountdownTimer center targetDate={closestSessionDate} /> */}
-      </div>
+        <CountdownTimer center targetDate={closestSessionDate} />
+      </div>}
 
       <Button
         onClick={handleRoute}
-        className="mt-10 md:mt-16 bg-accent hover:bg-accent px-6 md:px-8 py-5 md:py-6 text-base md:text-lg flex items-center gap-2 animate-pulse"
+        className="font-montserrat-mid mt-10 md:mt-16 bg-accent hover:bg-accent px-6 md:px-8 py-5 md:py-6 text-base md:text-lg flex items-center gap-2 animate-pulse"
         style={{ animationDuration: "3s" }}
       >
         <Home size={18} />
@@ -156,7 +158,7 @@ export default function NotFound() {
       )}
 
       {/* Hint for the easter egg */}
-      <p className="absolute bottom-4 text-white/70 text-[10px] md:text-xs px-4 text-center w-full">
+      <p className="font-montserrat-mid absolute bottom-4 text-white/70 text-[10px] md:text-xs px-4 text-center w-full">
         {clickCount > 0 && clickCount < 5
           ? "Devam et, neredeyse başardın..."
           : "Psst... 404'e tıklamayı dene"}

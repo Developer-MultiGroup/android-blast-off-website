@@ -11,7 +11,7 @@ import { useState } from "react";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Badge } from "@/components/ui/badge";
 import Image from "next/image";
-import { formatIsoDate } from "@/lib/utils";
+import { formatIsoDate } from "@/lib/event-utils";
 import { motion, AnimatePresence } from "framer-motion";
 import { useRouter } from "next/navigation";
 
@@ -33,6 +33,9 @@ export default function SessionContainer({ event }: SessionContainerProps) {
 
     // Filter out sessions that occurred before today
     const upcomingSessions = sessions.filter((session) => {
+      if (!session.date || session.date.trim() === "") {
+        return false;
+      }
       // Parse date and time fields to create a proper date object
       const [year, month, day] = session.date.split("-").map(Number);
       const [hours, minutes] = session.startTime.split(":").map(Number);
@@ -235,7 +238,7 @@ export default function SessionContainer({ event }: SessionContainerProps) {
                 s.topic === session.topic
             );
             return (
-                <Card
+              <Card
                 key={`session-card-${session.speakerName}-${session.topic}`}
                 className={`select-none bg-white shadow-lg w-full mx-auto transition-all overflow-hidden h-full py-0 ${
                   isSelected ? "ring-2 ring-green-500" : ""
@@ -244,7 +247,9 @@ export default function SessionContainer({ event }: SessionContainerProps) {
                 <div className="flex h-full">
                   <div className="relative min-w-[160px] w-[160px] h-full bg-indigo-900 overflow-hidden shrink-0">
                     <Image
-                      src={`/images/speakers/${slugify(session.speakerName)}.webp`}
+                      src={`/images/speakers/${slugify(
+                        session.speakerName
+                      )}.webp`}
                       alt={session.speakerName}
                       fill
                       sizes="160px"
@@ -263,8 +268,11 @@ export default function SessionContainer({ event }: SessionContainerProps) {
                     <div className="flex-1">
                       <div className="flex items-center">
                         <p className="text-sm font-medium text-gray-500">
-                          {formatIsoDate(session.date)} {session.startTime} -{" "}
-                          {session.endTime}
+                          {session.date != ""
+                            ? `${formatIsoDate(session.date)} ${
+                                session.startTime
+                              } - ${session.endTime}`
+                            : "Tarih Belirlenecek"}
                         </p>
                       </div>
                       <p className="text-xl font-bold text-gray-900 mt-1">
