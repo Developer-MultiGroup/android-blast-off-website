@@ -5,6 +5,8 @@ import GoogleLogoInfiniteScroll from "../components/GoogleInfiniteScroll";
 import { useEffect, useState } from "react";
 import { ChevronDownIcon } from "lucide-react";
 import FloatingActionButton from "@/components/floating-action-button";
+import SponsorSlider from "@/components/sponsor-slider";
+import events from "@/data/events";
 
 const bootcampBenefits = [
   {
@@ -97,7 +99,7 @@ export default function Home() {
       </section>
 
       <span id="main" />
-      <GoogleLogoInfiniteScroll />
+      <SponsorSlider sponsors={events[0].sponsors} />
 
       {/* Main Content Section */}
       <div className="bg-background">
@@ -260,7 +262,7 @@ export default function Home() {
             <div className="flex justify-center lg:justify-start">
               <button className="relative h-11 px-6 text-zinc-900 group transition-all duration-300 ease-in-out">
                 <a
-                  href="https://www.youtube.com/@devmultigroup"
+                  href="https://docs.google.com/spreadsheets/d/1hsckdhSJrvN6VG0NfO2lghY0A8bSjqhGYnNATGPWzcc/edit?usp=sharing"
                   target="_blank"
                 >
                   <div className="absolute inset-0 bg-secondary transition-transform duration-300 ease-in-out rounded-md" />
@@ -404,7 +406,7 @@ export default function Home() {
           </div>
         </section>
       </div>
-      <GoogleLogoInfiniteScroll />
+      <SponsorSlider sponsors={events[0].sponsors} />
       <FloatingActionButton alwaysShow={false} />
     </>
   );

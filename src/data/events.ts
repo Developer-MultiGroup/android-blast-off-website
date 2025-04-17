@@ -140,47 +140,39 @@ const events: Event[] = [
     sponsors: [
       {
         tier: "",
-        sponsorSlug: "google",
+        sponsorSlug: "multigroup",
       },
       {
         tier: "",
-        sponsorSlug: "microsoft",
+        sponsorSlug: "akbank",
       },
       {
         tier: "",
-        sponsorSlug: "turkish-airlines",
-      },
-      // {
-      //   tier: "",
-      //   sponsorSlug: "trendyol",
-      // },
-      {
-        tier: "",
-        sponsorSlug: "dogus-teknoloji",
+        sponsorSlug: "lyrebird-studio",
       },
       {
         tier: "",
-        sponsorSlug: "fibabanka",
-      },
-      {
-        tier: "",
-        sponsorSlug: "teknasyon",
-      },
-      {
-        tier: "",
-        sponsorSlug: "codeway",
-      },
-      {
-        tier: "",
-        sponsorSlug: "pazarama",
-      },
-      {
-        tier: "",
-        sponsorSlug: "deepset",
+        sponsorSlug: "instacart",
       },
       {
         tier: "",
         sponsorSlug: "softtech",
+      },
+      {
+        tier: "",
+        sponsorSlug: "turk-telekom",
+      },
+      {
+        tier: "",
+        sponsorSlug: "wite",
+      },
+      {
+        tier: "",
+        sponsorSlug: "d360-bank",
+      },
+      {
+        tier: "",
+        sponsorSlug: "sabanci-university",
       },
     ],
   },

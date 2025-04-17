@@ -54,7 +54,7 @@ export default function Footer() {
           >
             Kaynaklar
           </Link>
-          <Link
+          {/* <Link
             aria-label="Konuşmacılar sayfası"
             href="/konusmacilar"
             className="hover:text-secondary transition-colors ease-in-out duration-300"
@@ -67,7 +67,7 @@ export default function Footer() {
             className="hover:text-secondary transition-colors ease-in-out duration-300"
           >
             Takvim
-          </Link>
+          </Link> */}
           <Link
             aria-label="takvim"
             href="https://kommunity.com/devmultigroup"
