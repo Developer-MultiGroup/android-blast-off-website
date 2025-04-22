@@ -6,55 +6,64 @@ const events: Event[] = [
       {
         fullName: "Serkan Alc",
         title: "MultiGroup Community Lead",
-        company: "MultiGroup"
-        // company: "Microsoft",
+        company: "MultiGroup",
         // linkedin: "https://www.linkedin.com/in/daronyondem/",
         // twitter: "https://x.com/daronyondem",
       },
       {
         fullName: "Murat Yener",
         title: "Staff Mobile Engineer",
-        company: "Instacart"
+        company: "Instacart",
       },
       {
         fullName: "Kaan Enes Kapıcı",
         title: "Senior Mobile Application Engineer Specialist",
-        company: "turk-telekom"
+        company: "turk-telekom",
       },
       {
         fullName: "Mehmet Niyazi Atlıoğlu",
         title: "Android Developer",
-        company: "softtech"
+        company: "softtech",
       },
       {
         fullName: "Necati Sözer",
         title: "Android Software Engineer",
-        company: "Lyrebird Studio"
+        company: "Lyrebird Studio",
+      },
+      {
+        fullName: "Levent Kantaroğlu",
+        title: "Cross Platform Mobile Team Lead",
+        company: "Turkish Technology"
       },
       {
         fullName: "Emirhan Emmez",
         title: "Manager Android Engineer",
-        company: "d360-bank"
+        company: "d360-bank",
+      },
+      {
+        fullName: "Enes Zor",
+        title: "Android Developer",
+        company: "Trendyol",
       },
       {
         fullName: "Onur Özdemir",
         title: "Düzenlenecek",
-        company: "Akbank"
+        company: "Akbank",
       },
       {
         fullName: "Kasım Adalan",
         title: "Sr Android - IOS Developer",
-        company: "Sabancı University"
+        company: "Sabancı University",
       },
       {
         fullName: "Melissa Çoralı",
         title: "Android Developer & Scrum Master",
-        company: "Akbank"
+        company: "Akbank",
       },
       {
         fullName: "Ömer Karaca",
         title: "Co-Founder",
-        company: "wite"
+        company: "wite",
       },
     ],
     sessions: [
@@ -102,11 +111,33 @@ const events: Event[] = [
         speakerName: "Necati Sözer",
       },
       {
+        topic: "BELİRLENECEK",
+        date: "2025-06-02",
+        startTime: "20:30",
+        endTime: "22:00",
+        speakerName: "Levent Kantaroğlu",
+      },
+      {
         topic: "Retrofit ile API Entegrasyonu",
         date: "2025-06-04",
         startTime: "20:30",
         endTime: "22:00",
         speakerName: "Emirhan Emmez",
+      },
+      {
+        topic:
+          "Room ve DataStore Kullanımı: Android'de Veri Saklama Yöntemleri",
+        date: "2025-06-07",
+        startTime: "20:30",
+        endTime: "22:00",
+        speakerName: "Enes Zor",
+      },
+      {
+        topic: "WorkManager Nedir? Android’de Arka Plan İşlemleri Yönetimi",
+        date: "2025-06-11",
+        startTime: "20:30",
+        endTime: "22:00",
+        speakerName: "Enes Zor",
       },
       {
         topic: "Android Views Nedir? Compose Öncesi Geleneksel UI Yapısı",
@@ -116,7 +147,7 @@ const events: Event[] = [
         speakerName: "Onur Özdemir",
       },
       {
-        topic: "",
+        topic: "BELİRLENECEK",
         date: "2025-06-16",
         startTime: "20:30",
         endTime: "22:00",
