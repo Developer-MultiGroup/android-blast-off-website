@@ -33,7 +33,7 @@ const events: Event[] = [
       {
         fullName: "Levent Kantaroğlu",
         title: "Cross Platform Mobile Team Lead",
-        company: "Turkish Technology"
+        company: "Turkish Technology",
       },
       {
         fullName: "Emirhan Emmez",
@@ -175,6 +175,10 @@ const events: Event[] = [
       },
       {
         tier: "",
+        sponsorSlug: "turkish-technology",
+      },
+      {
+        tier: "",
         sponsorSlug: "akbank",
       },
       {
@@ -187,6 +191,10 @@ const events: Event[] = [
       },
       {
         tier: "",
+        sponsorSlug: "trendyol",
+      },
+      {
+        tier: "",
         sponsorSlug: "softtech",
       },
       {
@@ -195,15 +203,15 @@ const events: Event[] = [
       },
       {
         tier: "",
+        sponsorSlug: "sabanci-university",
+      },
+      {
+        tier: "",
         sponsorSlug: "wite",
       },
       {
         tier: "",
         sponsorSlug: "d360-bank",
-      },
-      {
-        tier: "",
-        sponsorSlug: "sabanci-university",
       },
     ],
   },
