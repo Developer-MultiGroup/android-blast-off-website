@@ -16,38 +16,13 @@ const events: Event[] = [
         company: "Instacart",
       },
       {
-        fullName: "Kaan Enes Kapıcı",
-        title: "Senior Mobile Application Engineer Specialist",
-        company: "turk-telekom",
-      },
-      {
-        fullName: "Mehmet Niyazi Atlıoğlu",
-        title: "Android Developer",
-        company: "softtech",
-      },
-      {
         fullName: "Necati Sözer",
         title: "Android Software Engineer",
         company: "Lyrebird Studio",
       },
       {
-        fullName: "Levent Kantaroğlu",
-        title: "Cross Platform Mobile Team Lead",
-        company: "Turkish Technology",
-      },
-      {
-        fullName: "Emirhan Emmez",
-        title: "Manager Android Engineer",
-        company: "d360-bank",
-      },
-      {
-        fullName: "Enes Zor",
-        title: "Android Developer",
-        company: "Trendyol",
-      },
-      {
-        fullName: "Onur Özdemir",
-        title: "Düzenlenecek",
+        fullName: "Melissa Çoralı",
+        title: "Android Developer & Scrum Master",
         company: "Akbank",
       },
       {
@@ -56,14 +31,44 @@ const events: Event[] = [
         company: "Sabancı University",
       },
       {
-        fullName: "Melissa Çoralı",
-        title: "Android Developer & Scrum Master",
-        company: "Akbank",
+        fullName: "Mehmet Niyazi Atlıoğlu",
+        title: "Android Developer",
+        company: "softtech",
       },
       {
         fullName: "Ömer Karaca",
         title: "Co-Founder",
         company: "wite",
+      },
+      {
+        fullName: "İrem Aral",
+        title: "Human Resources Business Partner",
+        company: "Roofstacks"
+      },
+      {
+        fullName: "Kaan Enes Kapıcı",
+        title: "Senior Mobile Application Engineer Specialist",
+        company: "turk-telekom",
+      },
+      {
+        fullName: "Emirhan Emmez",
+        title: "Manager Android Engineer",
+        company: "d360-bank",
+      },
+      {
+        fullName: "Onur Özdemir",
+        title: "Düzenlenecek",
+        company: "Akbank",
+      },
+      {
+        fullName: "Enes Zor",
+        title: "Android Developer",
+        company: "Trendyol",
+      },
+      {
+        fullName: "Levent Kantaroğlu",
+        title: "Cross Platform Mobile Team Lead",
+        company: "Turkish Technology",
       },
     ],
     sessions: [
