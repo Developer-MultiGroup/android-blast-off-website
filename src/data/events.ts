@@ -204,6 +204,10 @@ const events: Event[] = [
       },
       {
         tier: "",
+        sponsorSlug: "roofstacks",
+      },
+      {
+        tier: "",
         sponsorSlug: "turk-telekom",
       },
       {
