@@ -36,6 +36,11 @@ const events: Event[] = [
         company: "softtech",
       },
       {
+        fullName: "Emre Özcan",
+        title: "Android Developer",
+        company: "Innova",
+      },
+      {
         fullName: "Ömer Karaca",
         title: "Co-Founder",
         company: "wite",
@@ -43,7 +48,7 @@ const events: Event[] = [
       {
         fullName: "İrem Aral",
         title: "Human Resources Business Partner",
-        company: "Roofstacks"
+        company: "Roofstacks",
       },
       {
         fullName: "Kaan Enes Kapıcı",
@@ -81,6 +86,13 @@ const events: Event[] = [
         // url: ""
       },
       {
+        topic: "Kotlin ile Modern Programlama Temelleri",
+        date: "2025-05-14",
+        startTime: "20:30",
+        endTime: "22:00",
+        speakerName: "Emre Özcan",
+      },
+      {
         topic: "Jetpack Compose Nedir? Temel Bilgilerle Hızlı Başlangıç",
         date: "2025-05-17",
         startTime: "20:30",
@@ -88,11 +100,25 @@ const events: Event[] = [
         speakerName: "Murat Yener",
       },
       {
+        topic: "Blast Off Program Genel Soru Cevap",
+        date: "2025-05-19",
+        startTime: "20:30",
+        endTime: "22:00",
+        speakerName: "MultiGroup Team",
+      },
+      {
         topic: "Jetpack Compose'da State Yönetimi",
         date: "2025-05-21",
         startTime: "20:30",
         endTime: "22:00",
         speakerName: "Kaan Enes Kapıcı",
+      },
+      {
+        topic: "Jetpack Compose Navigation Kullanımı",
+        date: "2025-05-24",
+        startTime: "20:30",
+        endTime: "22:00",
+        speakerName: "Mehmet Niyazi Atlıoğlu",
       },
       {
         topic: "Android Dünyası için Yapay Zeka Gelişmeleri",
@@ -201,6 +227,10 @@ const events: Event[] = [
       {
         tier: "",
         sponsorSlug: "softtech",
+      },
+      {
+        tier: "",
+        sponsorSlug: "innova",
       },
       {
         tier: "",

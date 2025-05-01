@@ -240,7 +240,7 @@ export default function SessionContainer({ event }: SessionContainerProps) {
             return (
               <Card
                 key={`session-card-${session.speakerName}-${session.topic}`}
-                className={`select-none bg-white shadow-lg w-full mx-auto transition-all overflow-hidden h-full py-0 ${
+                className={`select-none bg-white shadow-lg w-full mx-auto transition-all overflow-hidden h-full min-h-36 py-0 ${
                   isSelected ? "ring-2 ring-green-500" : ""
                 }`}
               >
