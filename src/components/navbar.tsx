@@ -34,12 +34,13 @@ const Navbar = () => {
   const navigationItems = [
     { href: "/", label: "Anasayfa" },
     { href: "/kaynaklar", label: "Kaynaklar" },
+    { href: "/icerik", label: "İçerik" },
     // { href: "/konusmacilar", label: "Konuşmacılar", isScroll: true },
     // { href: "/takvim", label: "Takvim", isScroll: true },
   ];
 
   return (
-    <header className="absolute w-full z-50 px-6 sm:px-12 bg-transparent py-2 font-montserrat-mid">
+    <header className="absolute w-full z-50 px-6 sm:px-16 bg-transparent py-2 font-montserrat-mid">
       <div className="mx-auto px-8 sm:px-6 lg:px-16">
         <div className="flex h-20 items-center justify-between">
           {/* Logo - Mobilde daha sola alındı */}

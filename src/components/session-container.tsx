@@ -127,7 +127,7 @@ export default function SessionContainer({ event }: SessionContainerProps) {
   };
 
   return (
-    <div className="max-w-6xl mx-auto md:w-5/6 pb-16 md:px-0 px-4">
+    <div className="max-w-6xl mx-auto md:w-5/6 md:px-0 px-4">
       <AnimatePresence>
         {selectedSessions.length > 0 && (
           <motion.div
