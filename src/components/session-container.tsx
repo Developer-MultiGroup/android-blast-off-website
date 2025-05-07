@@ -127,7 +127,7 @@ export default function SessionContainer({ event }: SessionContainerProps) {
   };
 
   return (
-    <div className="max-w-6xl mx-auto md:w-5/6 md:px-0 px-4">
+    <div className="max-w-7xl mx-auto md:w-5/6 px-4 md:px-0">
       <AnimatePresence>
         {selectedSessions.length > 0 && (
           <motion.div
@@ -240,7 +240,7 @@ export default function SessionContainer({ event }: SessionContainerProps) {
             return (
               <Card
                 key={`session-card-${session.speakerName}-${session.topic}`}
-                className={`select-none bg-white shadow-lg w-full mx-auto transition-all overflow-hidden h-full min-h-36 py-0 ${
+                className={`select-none bg-white shadow-lg w-full mx-auto transition-all overflow-hidden h-full min-h-48 md:min-h-36 py-0 ${
                   isSelected ? "ring-2 ring-green-500" : ""
                 }`}
               >

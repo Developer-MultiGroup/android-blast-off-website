@@ -7,26 +7,28 @@ export default function ContentPage() {
   return (
     <section>
       <section className="bg-primary text-white min-h-screen flex flex-col justify-between pt-48">
-        <div className="max-w-7xl mx-auto">
-          <h1 className="text-4xl mb-4">
-            Kemerlerinizi Bağlayın,
-            <br />
-            Kalkışa Geçiyoruz!
-          </h1>
-          <p className="text-lg mb-6 font-montserrat-mid w-1/2">
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-          </p>
-          <a
-            href="#"
-            className="text-accent hover:underline font-medium font-montserrat-mid"
-          >
-            Blast Off Content
-          </a>
+        <div className="max-w-7xl mx-auto w-full px-4 md:px-0">
+          <div className="flex flex-col items-center md:items-start">
+            <h1 className="text-3xl md:text-4xl mb-4 text-center md:text-left">
+              Kemerlerinizi Bağlayın,
+              <br />
+              Kalkışa Geçiyoruz!
+            </h1>
+            <p className="text-base md:text-lg mb-6 font-montserrat-mid w-full md:w-1/2 text-center md:text-left">
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's standard dummy text
+            </p>
+            <a
+              href="#"
+              className="text-accent hover:underline font-medium font-montserrat-mid text-center md:text-left"
+            >
+              Blast Off Content
+            </a>
+          </div>
         </div>
 
         <div className="bg-[#f8f9fb] text-black mt-20 py-20 w-full">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row gap-8 justify-center">
+          <div className="max-w-7xl mx-auto w-full px-4 md:px-0 flex flex-col sm:flex-row gap-8 justify-center">
             {[1, 2, 3].map((_, index) => (
               <div
                 key={index}
@@ -77,8 +79,11 @@ export default function ContentPage() {
                 </p>
               </div>
               <div className="mt-8 flex items-center gap-4">
-                <div className="w-24 h-8 bg-neutral-900 rounded-xl" />
-                <span className="font-bold">#Bootcamp</span>
+                <a href="#" className="w-40 h-12 bg-neutral-900 rounded-xl text-white text-lg font-semibold flex items-center justify-center focus:outline-none">
+                  lorem
+                </a>
+                <span className="h-8 w-px bg-gray-400 mx-2" />
+                <span className="font-bold text-xl">#Bootcamp</span>
               </div>
             </div>
 
@@ -100,8 +105,11 @@ export default function ContentPage() {
                 </p>
               </div>
               <div className="mt-8 flex items-center gap-4">
-                <div className="w-24 h-8 bg-blue-500 rounded-xl" />
-                <span className="font-bold">#Community</span>
+                <a href="#" className="w-40 h-12 bg-blue-500 rounded-xl text-white text-lg font-semibold flex items-center justify-center focus:outline-none">
+                  lorem
+                </a>
+                <span className="h-8 w-px bg-gray-400 mx-2" />
+                <span className="font-bold text-xl">#Community</span>
               </div>
             </div>
           </div>
@@ -118,7 +126,7 @@ export default function ContentPage() {
         <SessionContainer event={events[0]} />
       </section>
 
-      <section className="flex flex-col justify-center align-middle items-center w-full py-16 bg-[#f8f9fb]">
+      <section className="flex flex-col justify-center align-middle items-center w-full py-16 bg-[#f8f9fb] px-4 md:px-0">
         <h2 className="text-center text-3xl sm:text-3xl md:text-4xl lg:text-5xl mb-6 sm:mb-8 py-10">
           İçeriği Kendine Göre{" "}
           <span className="text-accent  underline underline-offset-3 md:no-underline decoration-accent">

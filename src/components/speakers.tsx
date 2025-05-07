@@ -21,12 +21,12 @@ const Speakers: React.FC<SpeakerCarouselProps> = ({ speakers }) => {
   };
 
   return (
-    <section className="w-full max-w-7xl mx-auto px-4 sm:px-6 font-montserrat-mid">
-      <div className="flex flex-wrap justify-center gap-4">
+    <section className="w-full max-w-7xl mx-auto font-montserrat-mid">
+      <div className="flex flex-wrap justify-center gap-4 px-4 md:px-0">
         {speakers.map((speaker) => (
           <div
             key={speaker.fullName}
-            className={`w-[200px] h-[250px] cursor-pointer group [perspective:1000px] ${
+            className={`w-[calc(50%-0.5rem)] sm:w-[200px] h-[250px] cursor-pointer group [perspective:1000px] ${
               flippedCards[speaker.fullName] ? "flip-active" : ""
             }`}
             onClick={() => handleCardClick(speaker.fullName)}
