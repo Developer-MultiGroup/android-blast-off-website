@@ -90,11 +90,14 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
       ),
       [BLOCKS.HR]: () => <hr className="my-8 border-gray-600" />,
       [BLOCKS.EMBEDDED_ASSET]: (node: any) => {
-        // Handle embedded assets like images
-        // You'll need to adjust this based on your Contentful setup
-        const { title, description, file } = node.data.target.fields;
+        const asset = node.data.target;
+        if (!asset || !asset.fields) return null;
+
+        const { title, description, file } = asset.fields;
+        if (!file || !file.url) return null;
+
         const { url, details } = file;
-        const { height, width } = details.image || { height: 400, width: 600 };
+        const { height, width } = details?.image || { height: 400, width: 600 };
 
         return (
           <div className="my-6">
@@ -104,6 +107,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
               width={width}
               height={height}
               className="mx-auto rounded-lg"
+              priority={false}
             />
             {description && (
               <p className="text-sm text-center text-gray-400 mt-1">
