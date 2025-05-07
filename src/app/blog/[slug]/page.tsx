@@ -6,9 +6,9 @@ import { BLOCKS, INLINES, MARKS, Document } from "@contentful/rich-text-types";
 import Image from "next/image";
 
 interface BlogPostPageProps {
-  params: {
+  params: Promise<{
     slug: string;
-  };
+  }>;
 }
 
 export const revalidate = 60;
