@@ -35,8 +35,7 @@ const Navbar = () => {
     { href: "/", label: "Anasayfa" },
     { href: "/kaynaklar", label: "Kaynaklar" },
     { href: "/icerik", label: "İçerik" },
-    // { href: "/konusmacilar", label: "Konuşmacılar", isScroll: true },
-    // { href: "/takvim", label: "Takvim", isScroll: true },
+    { href: "/blog", label: "Blog" },
   ];
 
   return (
