@@ -11,7 +11,7 @@ export const getBlogPosts = async (): Promise<Entry<BlogPostSkeleton>[]> => {
     content_type: "dmgBlog",
   });
 
-//   console.log(res.items);
+  console.log(res.items);
 
   return res.items;
 };

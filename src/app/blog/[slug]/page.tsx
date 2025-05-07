@@ -13,6 +13,16 @@ interface BlogPostPageProps {
 
 export const revalidate = 60;
 
+// Helper function to extract text from Contentful rich text document
+function extractTextFromRichText(node: any): string {
+  if (!node) return '';
+  if (typeof node === 'string') return node;
+  if (Array.isArray(node)) return node.map(extractTextFromRichText).join(' ');
+  if (node.nodeType === 'text') return node.value;
+  if (node.content) return extractTextFromRichText(node.content);
+  return '';
+}
+
 export default async function BlogPostPage({ params }: BlogPostPageProps) {
   const { slug } = await params;
   const post = await getPostBySlug(slug);
@@ -25,6 +35,14 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
     month: "long",
     year: "numeric",
   });
+
+  // Calculate reading time
+  let readingTime = 1;
+  if (body) {
+    const text = extractTextFromRichText(body);
+    const wordCount = text.trim().split(/\s+/).length;
+    readingTime = Math.max(1, Math.ceil(wordCount / 200));
+  }
 
   const isValidBody =
     typeof body === "object" &&
@@ -109,12 +127,21 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
   };
 
   return (
-    <main className="min-h-screen px-6 pt-[25vh] pb-12 font-montserrat-mid">
+    <main className="min-h-screen px-6 pt-[25vh] pb-12 font-montserrat-mid text-gray-300">
       <div className="max-w-3xl mx-auto">
-        <h1 className="text-4xl font-extrabold mb-2 text-center font-montserrat text-secondary">
+        {/* Authors */}
+        {writers && Array.isArray(writers) && writers.length > 0 && (
+          <p className="text-sm mb-2 text-accent text-left md:text-center">
+            {writers.length === 1 ? 'Yazar:' : 'Yazarlar:'} {writers.join(', ')}
+          </p>
+        )}
+        <p className="text-sm mb-5 text-accent text-left md:text-center">
+          {formattedDate} <span className="mx-2">•</span> {readingTime} dk okuma süresi
+        </p>
+        <h1 className="text-4xl font-extrabold font-montserrat text-secondary mb-15 text-left md:text-center">
           {typeof title === "string" ? title : "Untitled"}
         </h1>
-        <p className="text-sm mb-10 text-center text-accent">{formattedDate}</p>
+        
         <article className="prose prose-lg max-w-none text-white">
           {isValidBody ? (
             documentToReactComponents(body as unknown as Document, options)
