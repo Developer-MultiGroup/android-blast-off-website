@@ -104,7 +104,7 @@ const events: Event[] = [
         date: "2025-05-19",
         startTime: "20:30",
         endTime: "22:00",
-        speakerName: "MultiGroup Team",
+        speakerName: "DMG Team",
       },
       {
         topic: "Jetpack Compose'da State Yönetimi",
