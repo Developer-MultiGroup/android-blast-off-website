@@ -25,9 +25,9 @@ Modern Android geliştirme dünyasına hızlı bir giriş yapmaya hazır mısın
 
 Bu projeye katkıda bulunmak isterseniz:
 
-- 🐛 [Hata bildirimi oluştur](https://github.com/Developer-MultiGroup/android-blast-off-website/issues/new)
-- 💡 [Yeni özellik önerisi yap](https://github.com/Developer-MultiGroup/android-blast-off-website/issues/new)
-- 📚 [Kaynak önerisi yap](https://github.com/Developer-MultiGroup/android-blast-off-website/issues/new)
+- 🐛 [Hata bildirimi oluştur](https://github.com/Developer-MultiGroup/android-blast-off-website/issues/new?template=bug_report.md)
+- 💡 [Yeni özellik önerisi yap](https://github.com/Developer-MultiGroup/android-blast-off-website/issues/new?template=feature_request.md)
+- 📚 [Kaynak önerisi yap](https://github.com/Developer-MultiGroup/android-blast-off-website/issues/new?template=resource_suggestion.md)
 - 🔄 [Pull Request gönder](https://github.com/Developer-MultiGroup/android-blast-off-website/compare)
 
 ## 🔗 Bağlantılar

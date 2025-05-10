@@ -1,39 +1,39 @@
 ---
-name: Bug Report
-about: Report a bug or issue
-title: "[BUG] "
+name: Hata Bildirimi
+about: Bir hata veya sorun bildirin
+title: "[HATA] "
 labels: bug
 assignees: ""
 ---
 
-## Description
+## Açıklama
 
-<!-- A clear and concise description of the issue -->
+<!-- Sorunu açık ve net bir şekilde açıklayın -->
 
-## Steps to Reproduce
+## Yeniden Oluşturma Adımları
 
 1.
 2.
 3.
 
-## Expected Behavior
+## Beklenen Davranış
 
-<!-- What you expected to happen -->
+<!-- Ne olmasını beklediğinizi açıklayın -->
 
-## Actual Behavior
+## Gerçekleşen Davranış
 
-<!-- What actually happened -->
+<!-- Gerçekte ne olduğunu açıklayın -->
 
-## Screenshots
+## Ekran Görüntüleri
 
-<!-- If applicable, add screenshots -->
+<!-- Varsa, ekran görüntüleri ekleyin -->
 
-## Environment
+## Ortam Bilgileri
 
-- Browser/Version:
-- OS:
-- Device:
+- Tarayıcı/Sürüm:
+- İşletim Sistemi:
+- Cihaz:
 
-## Additional Context
+## Ek Bilgiler
 
-<!-- Any other relevant information -->
+<!-- Diğer ilgili bilgiler -->

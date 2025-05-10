@@ -1,23 +1,23 @@
 ---
-name: Feature Request
-about: Suggest a new feature or enhancement
-title: "[FEATURE] "
+name: Özellik İsteği
+about: Yeni bir özellik veya geliştirme önerin
+title: "[ÖZELLİK] "
 labels: enhancement
 assignees: ""
 ---
 
-## Problem Statement
+## Problem Tanımı
 
-<!-- Describe the problem this feature would solve -->
+<!-- Bu özelliğin çözeceği problemi açıklayın -->
 
-## Proposed Solution
+## Önerilen Çözüm
 
-<!-- Describe your proposed feature/solution -->
+<!-- Önerdiğiniz özelliği/çözümü açıklayın -->
 
-## Alternatives Considered
+## Düşünülen Alternatifler
 
-<!-- Any alternative solutions you've considered -->
+<!-- Düşündüğünüz alternatif çözümler -->
 
-## Additional Context
+## Ek Bilgiler
 
-<!-- Any other relevant information or screenshots -->
+<!-- Diğer ilgili bilgiler veya ekran görüntüleri -->
