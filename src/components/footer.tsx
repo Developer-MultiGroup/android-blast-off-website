@@ -61,7 +61,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="/etkinlikler"
+                  href="https://etkinlik.devmultigroup.com/"
                   className="hover:text-accent transition-all duration-300"
                 >
                   Etkinlikler
