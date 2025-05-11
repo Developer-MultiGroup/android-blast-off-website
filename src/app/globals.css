@@ -46,6 +46,7 @@
 /* For Firefox */
 html {
   scrollbar-width: none; /* Hide scrollbar */
+  scroll-behavior: smooth; /* Add smooth scrolling */
 }
 
 /* General reset for body and html */

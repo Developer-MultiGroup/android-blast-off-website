@@ -69,7 +69,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="#konusmacilar"
+                  href="/icerik#konusmacilar"
                   className="hover:text-accent transition-all duration-300"
                 >
                   Konuşmacılar
@@ -77,7 +77,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="#biletler"
+                  href="https://kommunity.com/devmultigroup/events/android-blast-off-jetpack-compose-bootcamp-18857d79/tickets/"
                   className="hover:text-accent transition-all duration-300"
                 >
                   Biletler
@@ -155,8 +155,9 @@ export default function Footer() {
               Etkinliklerden geri kalmamak için hemen aramıza katıl!
             </p>
             <Link
-              href="#kayıt"
+              href="https://kommunity.com/devmultigroup/events/android-blast-off-jetpack-compose-bootcamp-18857d79"
               className="inline-block border border-accent px-4 py-2 rounded-md hover:bg-accent transition"
+              target="_blank"
             >
               Yerini Ayırt
             </Link>
@@ -173,6 +174,7 @@ export default function Footer() {
               href="https://www.instagram.com/devmultigroup/"
               aria-label="Instagram"
               className="hover:text-accent transition-all duration-300"
+              target="_blank"
             >
               <InstagramLogo />
             </Link>
@@ -180,6 +182,7 @@ export default function Footer() {
               href="https://x.com/devmultigroup"
               aria-label="X"
               className="hover:text-accent transition-all duration-300"
+              target="_blank"
             >
               <XLogo />
             </Link>
@@ -187,6 +190,7 @@ export default function Footer() {
               href="https://www.linkedin.com/company/devmultigroup/"
               aria-label="LinkedIn"
               className="hover:text-accent transition-all duration-300"
+              target="_blank"
             >
               <LinkedinLogo />
             </Link>
@@ -194,6 +198,7 @@ export default function Footer() {
               href="https://github.com/Developer-MultiGroup"
               aria-label="Github"
               className="hover:text-accent transition-all duration-300"
+              target="_blank"
             >
               <GithubLogo />
             </Link>

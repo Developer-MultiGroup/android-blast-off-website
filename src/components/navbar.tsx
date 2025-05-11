@@ -40,7 +40,7 @@ const Navbar = () => {
 
   return (
     <header className="absolute w-full z-50 px-6 sm:px-16 bg-transparent py-2 font-montserrat-mid">
-      <div className="mx-auto px-8 sm:px-6 lg:px-16">
+      <div className="mx-auto px-4 sm:px-6 lg:px-0 xl:px-16">
         <div className="flex h-20 items-center justify-between">
           {/* Logo - Mobilde daha sola alındı */}
           <div className="flex-shrink-0 -ml-2 sm:ml-0">
