@@ -20,7 +20,7 @@ export default async function BlogIndexPage() {
       <div className="h-[20vh]"></div>
 
       {/* Content container */}
-      <div className="w-11/12 md:w-5/6 max-w-5xl mx-auto">
+      <div className="w-11/12 md:w-4/5 max-w-6xl mx-auto">
         <header className="mb-12 md:mb-16 text-center">
           <h1 className="text-3xl md:text-4xl font-bold mb-5 text-white">
             Blog{" "}
@@ -33,11 +33,11 @@ export default async function BlogIndexPage() {
         </header>
 
         {/* Blog posts grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
           {posts.map((post) => (
             <Card
               key={post.sys.id}
-              className="mb-6 bg-gray-800/70 backdrop-blur-sm border border-gray-600/30 hover:border-accent hover:bg-gray-800/80 hover:shadow-lg hover:shadow-gray-900/20 transition-all duration-300 group overflow-hidden rounded-xl"
+              className="mb-6 bg-gray-800/70 backdrop-blur-sm border border-gray-600/30 hover:border-accent hover:bg-gray-800/80 hover:shadow-lg hover:shadow-gray-900/20 transition-all duration-300 group overflow-hidden rounded-xl w-full"
             >
               <CardHeader>
                 <p className="text-secondary text-sm mb-4">
@@ -54,6 +54,7 @@ export default async function BlogIndexPage() {
                 {Array.isArray(post.fields.writers) &&
                   post.fields.writers.length > 0 && (
                     <div className="text-accent text-sm mt-2">
+                      {post.fields.writers.length === 1 ? "Yazar: " : "Yazarlar: "}
                       {post.fields.writers.join(", ")}
                     </div>
                   )}
